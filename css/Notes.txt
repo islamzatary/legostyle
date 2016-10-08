@@ -1,0 +1,18 @@
+Not Removed:
+-Sprite Icons
+-font icons
+-fieldset style
+-bullet icons
+-leftside menu
+-Toolbox
+-PT
+
+
+
+Removed:
+-anything related to bayt pages
+
+
+Actions:
+-moving widget-box code to jobs css
+-moving #breadcrumbs, #breadcrumbs a to jobs 

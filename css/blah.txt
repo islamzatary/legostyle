@@ -1,0 +1,433 @@
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden] {
+  display: none;
+}
+
+
+
+.wrapper_960 {
+    width:960px;
+    margin:0 auto;
+}
+.wrapper_1140 {
+    width:1140px;
+    margin:0 auto;
+}
+.wrapper_1200 {
+    width:1200px;
+    margin:0 auto;
+}
+/***** Start Widgets *****/
+
+.widget-box { 
+    border:1px solid #ECECEC;
+}
+.widget-header {
+    color:#000;
+    background:#ECECEC;
+    padding:10px;
+}
+#sidebar .widget-header h2,.grid-sidebar .widget-header h2 {
+    font-size:1.4em;
+    background:transparent;
+    color:#333;
+}
+.grid-sidebar .widget-header { 
+    font-size:1.2em;
+}
+.widget-body { 
+    padding:10px;
+}
+.widget-footer {
+    padding:10px;
+}
+
+/***** End Widgets *****/
+
+
+/***** Start Lego Main Styles ******/
+
+.inline{display:inline;}
+.inline-b{display:inline-block;}
+.display-b{display:block;}
+.c-block{margin:0 auto;}
+.display-t{display:table;}
+.display-flex{display:flex;}
+.overflow-h{overflow:hidden !important;}
+.pos-abs{position:absolute;}
+.pos-rel{position:relative;}
+.text-l,#ar .text-r {text-align:left;}
+#ar .text-l,.text-r{text-align:right;}
+.bold{font-weight:bold !important;}
+.underline-none{text-decoration:none !important;}
+.vert_algn_mid{vertical-align:middle;}
+.bg-none{background:none !important;}
+.border-rad-3 { border-radius:3px;}
+.border-rad-4 { border-radius:4px;}
+.border-rad-5 { border-radius:5px;}
+.uppercase {text-transform:uppercase;}
+.capitalize {text-transform:capitalize;}
+.text-select-none {-webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;-o-user-select:none;user-select:none;-ms-user-select: none;}
+
+
+
+/***** Start Margin Styles ******/
+
+.margin-reset{margin:0 !important;}
+.margin_bottom_30{margin-bottom:30px !important;}
+.margin_bottom_25{margin-bottom:25px !important;}
+.margin_bottom_20{margin-bottom:20px !important;}
+.margin_bottom_15{margin-bottom:15px !important;}
+.margin_bottom_10{margin-bottom:10px !important;}
+.margin_bottom_5{margin-bottom:5px !important;}
+.margin-sep{margin:0 5px;}
+.margin-sep-10{margin:0 10px;}
+.margin-sep-per{margin:0 0.5%;}
+
+/***** End Margin Styles ******/
+
+/***** Start Padding Styles ******/
+
+.padding-reset{padding:0 !important;}
+.padding_bottom_30{padding-bottom:30px !important;}
+.padding_bottom_25{padding-bottom:25px !important;}
+.padding_bottom_20{padding-bottom:20px !important;}
+.padding_bottom_15{padding-bottom:15px !important;}
+.padding_bottom_10{padding-bottom:10px !important;}
+.padding_bottom_5{padding-bottom:5px !important;}
+.padding-5{padding:5px;}
+.padding-10{padding:10px;}
+.padding-15{padding:15px;}
+.padding-20{padding:20px;}
+.padding-sep{padding:0 5px;}
+.padding-sep-10{padding:0 10px;}
+
+/***** End Padding Styles ******/
+
+/*************** Start Border Styles **************/
+
+.border_bottom_dotted{border-bottom:1px dotted #DADADA;}
+.border_bottom_solid{border-bottom:1px solid #DADADA;}
+.border_reset{border:0 !important;}
+
+/**************** End Border Styles *************/
+
+/**************** Flexbox **************** Reference from: http://css-tricks.com/snippets/css/a-guide-to-flexbox/ ****************/
+.flex-grow-1{flex-grow:1;}
+.flex-grow-2{flex-grow:2;}
+.flex-grow-3{flex-grow:3;}
+.flex-grow-4{flex-grow:4;}
+.flex-grow-5{flex-grow:5;}
+/**************** End Flexbox ****************/
+
+/***** Start Grid Styles ******/
+
+.grid-row{overflow:hidden;}
+.grid-1{width:10%;}
+.grid-2{width:20%;}
+.grid-3{width:30%;}
+.grid-4{width:40%;}
+.grid-5{width:50%;}
+.grid-6{width:60%;}
+.grid-7{width:70%;}
+.grid-8{width:80%;}
+.grid-9{width:90%;}
+.grid-10{width:100%;}
+.grid-th{width:33%;}
+.grid-th2{width:66%;}
+.grid-sidebar{padding:0 0 0 20px;}
+#ar .grid-sidebar{padding:0 10px 0 0;}
+/***** End Grid Styles ******/
+.l,#ar .r{float:left !important;}
+.r,#ar .l{float:right !important;}
+.c{text-align:center;}
+.clear{clear:both;}
+.hide{display:none;}
+.mute { color:#999;}
+/**** Font Size Options ********/
+.font-s { font-size:0.9em}
+.font-n { font-size:1em}
+.font-m { font-size:1.2em}
+.font-l { font-size:1.4em}
+.font-xl { font-size:1.8em}
+.font-xxl { font-size:2.2em}
+.font-xxxl { font-size:3em}
+.font-xxxxl { font-size:3.4em}
+/***** End Lego Styles ******/
+
+
+/*********** flat tabs ************/
+
+.flat_tabs{background:#ededed;border:1px solid #dadada;border-width:0 0 1px;height:35px;margin:0 0 20px;padding:5px 5px 0;}
+.flat_tabs li{float:left;margin:0 5px -1px 0;}
+#ar .flat_tabs li{float:right;margin:0 0 -1px 5px;}
+.flat_tabs a{color:#9D9D9C;display:block;padding:8px 12px;text-decoration:none;}
+.flat_tabs a:hover{text-decoration:none;}
+.flat_tabs .on a{background:#fff;border:1px solid #dadada;border-width:1px 1px 0;color:#1D1D1B;font-weight:700;}
+.flat_tabs_vert{border-width:0 0 1px 0;}
+.flat_tabs_vert li{float:none;margin:0;}
+
+
+/*********** Accordion tabs ************/
+
+.accordion_head{margin:0 0 12px;padding:10px;height:16px;line-height:17px;color:#9D9D9C;background:#E7E7E7;font-size:12px;cursor:pointer;overflow:hidden;}
+.accordion_head.on{color:#7A7A79;background:#D6D6D6;}
+.accordion_head:hover{color:#7A7A79;}
+.accordion_head i.i_arrow2_gray,.accordion_head i.i_arrow_gray{margin:0 2px 0 0;}
+#ar .accordion_head i.i_arrow2_gray,#ar .accordion_head i.i_arrow_gray{margin:0 0 0 2px;}
+.accordion_body{padding:10px;border:1px solid #E7E7E7;margin:0 0 12px;}
+
+
+/************************ Start Menu **************************/
+.menu {
+	margin:0 0 10px 0;
+	display:inline-block;
+}
+.menu a {
+	text-decoration:none;
+}
+.menu > li > a {
+	border:1px solid #DADADA;
+	position:relative;
+	z-index:99;
+}
+.menu:hover > li > a {
+	border-bottom:0;
+}
+.menu li a {
+	display:block;
+	padding:6px 8px;
+	background:#FFF;
+}
+.sub-menu {
+	display:none;
+	border:1px solid #DADADA;
+	min-width:130px;
+	margin-top:-1px;
+	margin-bottom:0;
+	position:absolute;
+	background:#FFF;
+	z-index:9;
+}
+.sub-menu li a:hover {
+	background:#F7F7F7;
+}
+.sub-menu .sep {
+	border-bottom:1px solid #DADADA;
+}
+.menu:hover .sub-menu {
+	display:block;
+}
+.menu-grp {
+	margin:0 0 10px 0;
+}
+.menu-grp .menu {
+	margin:0 -3px 0 0;
+}
+.menu-grp .menu > li > a {
+	border-width:1px 0 1px 1px;
+}
+.menu-grp .menu:first-child > li > a {
+	border-radius:3px 0 0 3px;
+}
+.menu-grp .menu:last-child > li > a {
+	border-width:1px;
+	border-radius:0 3px 3px 0;
+}
+.menu-grp .menu:hover > li > a {
+	border-radius:0;
+}
+.submenu-right {
+	position:relative;
+}
+.submenu-right-list {
+	display:none;
+	border:1px solid #DADADA;
+	min-width:130px;
+	margin-top:-1px;
+	margin-bottom:0;
+	position:absolute;
+	background:#FFF;
+	z-index:999;
+	top:0;
+}
+
+
+/************************ Start Flat BG Colors ********** Reference from : http://flatuicolors.com/ ******************/
+
+.green {background:#1abc9c;}
+.dgreen {background:#16a085;}
+.lgreen {background:#2ecc71;}
+.ldgreen {background:#27ae60;}
+.blue {background:#3498db;}
+.dblue {background:#2980b9;}
+.violet {background:#9b59b6;}
+.dviolet {background:#8e44ad;}
+.yellow {background:#f1c40f;}
+.dyellow {background:#f39c12;}
+.orange {background:#e67e22;}
+.dorange {background:#d35400;}
+.red {background:#e74c3c;}
+.dred {background:#c0392b;}
+.gray {background:#ecf0f1;}
+.dgray {background:#bdc3c7;}
+
+/************************ End Flat BG Colors **************************/
+
+/************************ Start Colors ****************************/
+.tWhite { color:#FFF;}
+.tBlack { color:#FFF;}
+.tGray { color:#CCC;}
+.tlGray { color:#F0F0F0;}
+.tDGray { color:#333;}
+/************************ End Colors ****************************/
+
+/************************ Start Multi Slider Style**************************/
+.multi_slider_list_container {direction:ltr;}
+.multi_slider_prev, .multi_slider_next {
+	cursor:pointer;
+	font-size:40px;
+	font-weight:bold;
+	display:inline-block;
+	width:24px;
+	height:24px;
+	line-height:24px;
+	top:50%;
+	margin-top:-12px;
+}
+.multi_slider_prev, #ar .multi_slider_next {
+	left:0;
+	right:auto;
+}
+#ar .multi_slider_prev, .multi_slider_next {
+	right:0;
+	left:auto;
+}
+/************************ Start Multi Slider Style **************************/
+
+/************************ Start Button **************************/
+
+.btn {
+	display: inline-block;
+	padding: 6px 12px;
+	margin-bottom: 0;
+	font-size: 1.2em;
+	font-weight: normal;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	-webkit-user-select: none;
+	 -moz-user-select: none;
+	  -ms-user-select: none;
+	   -o-user-select: none;
+		  user-select: none;
+}
+.btn.small {
+	padding: 3px 6px;
+	font-size: 1em;
+	border-radius: 3px;
+}
+.btn.large {
+	padding: 10px 15px;
+	font-size: 1.4em;
+	border-radius: 5px;
+}
+/************************ End Button **************************/
+
+
+/************************ Start Flat Checkbox and Radio Buttons **************************/
+.flat_label {
+	line-height:22px;
+	display:block;
+	cursor:pointer;
+	user-select:none;  
+}
+input[type='radio'], input[type='checkbox'] {
+    opacity:0;
+    width:22px;
+	height:22px;
+	float:left;
+	margin:0 -22px;
+}
+#ar input[type='radio'],#ar input[type='checkbox'] {float:right;}
+.input_helper {
+	width:22px;
+	height:22px;
+	display:inline-block;
+	cursor:pointer;
+	background:url(../images/blue-flat-input.png);
+	float:left;
+}
+.input_helper.green {background-image:url(../images/green-flat-input.png);}
+.input_helper.grey {background-image:url(../images/grey-flat-input.png);}
+.input_helper.black {background-image:url(../images/black-flat-input.png);}
+.input_helper.orange {background-image:url(../images/orange-flat-input.png);}
+#ar input[type='radio'],#ar input[type='checkbox'], #ar .input_helper {float:right;}
+input[type='checkbox'] + .input_helper {background-position:0 0;}
+input[type='checkbox']:hover + .input_helper {background-position:-24px 0;}
+input[type='checkbox']:checked + .input_helper {background-position:-48px 0;}
+input[type='checkbox'].disabled + .input_helper {background-position:-72px 0;}
+input[type='checkbox'].disabled_checked + .input_helper {background-position:-96px 0;}
+input[type='radio'] + .input_helper {background-position:-120px 0;}
+input[type='radio']:hover + .input_helper {background-position:-144px 0;}
+input[type='radio']:checked + .input_helper {background-position:-168px 0;}
+input[type='radio'].disabled + .input_helper {background-position:-192px 0;}
+input[type='radio'].disabled_checked + .input_helper {background-position:-216px 0;}
+/************************ End Flat Buttons **************************/
+
+
+/************************ Start Tooltip *********************/
+.tooltip_up_text, .tooltip_down_text {
+	background:#333;
+	border:1px solid #CCCCCC;
+	color:#FFF;
+	padding:6px;
+	position:relative;
+	z-index:99;
+	font-style:normal;
+	font-size:1.1em;
+	font-weight:bold;
+}
+.tooltip_down_text:before {
+	border-color:transparent transparent #333 transparent;
+	border-style:solid;
+	border-width:0 5px 5px;
+	content:'';
+	height:0;
+	margin:-5px 0 0 -5px;
+	position:absolute;
+	top:0;
+	left:50%;
+	width:0;
+}
+#ar .tooltip_down_text:before{
+	margin:-5px -5px 0 0;
+}

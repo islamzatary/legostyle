@@ -1,0 +1,57 @@
+/************** Desktop Min 1200 *************/
+@media only screen and (min-width: 1200px) {
+    
+}
+/************** Desktop Min 1140 *************/
+@media only screen and (min-width: 1140px) {
+    
+}
+/************** Desktop Default *************/
+@media only screen and (min-width: 1024px) {
+    
+}
+/************** Table to Mini Desktop *************/
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+	
+}
+/************** Phone to Mini Tablet *************/
+@media only screen and (max-width: 767px) {
+	#main-header {
+		height:60px;
+		margin:0;
+		transition:margin 0.5s;
+	}
+	#main-header.move_menu {
+		margin:0 0 0 200px;
+	}
+	#sidebar-panel {
+		/*top:-60px;*/
+		left:-200px;
+		transition:left 0.5s;
+	}
+	#ar #sidebar-panel {
+		left:0;
+		right:-200px;
+		transition:right 0.5s;
+	}
+	#sidebar-panel.move_menu {
+		left:0;
+	}
+	#ar #sidebar-panel.move_menu {
+		left:auto;
+		right:0;
+	}
+	#content-panel, #ar #content-panel {
+		margin:0;
+		transition:margin 0.5s;
+	}
+	#logo img {
+		max-height:40px;
+	}
+	#content-panel.move_menu {
+		margin:0 0 0 200px;
+	}
+	#ar #content-panel.move_menu {
+		margin:0 200px 0 0;
+	}
+}

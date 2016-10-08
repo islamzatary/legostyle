@@ -1,0 +1,2268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Lego Style Framework</title>
+	<meta charset="utf-8" />
+	<meta http-equiv="content-language" content="en"/>
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
+	<meta http-equiv="content-script-type" content="text/javascript"/>
+	<meta http-equiv="content-style-type" content="text/css"/>
+	<meta name="copyright" content="Copyright 2000-2014 Bayt.com, Inc."/>
+    <link href="css/jobs-legostyle-169.css" rel="stylesheet" type="text/css" />
+	<link href="css/emp-legostyle-00.css" rel="stylesheet" type="text/css" />
+	<link href="css/emp_phablet-legostyle-00.css" rel="stylesheet" type="text/css" />
+	<link href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	<script>
+		devProjects=function(m){return true;}
+	</script>
+	<script type="text/javascript" src="js/main-0188.js"></script>
+	<script type="text/javascript" src="js/lego.js"></script>
+	<script type="text/javascript" src="js/lego_dashboard.js"></script>
+	<!--<script type="text/javascript" src="js/lego/d3.min.js"></script>-->
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+	
+	<!--[if lt IE 9]>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	
+    <style type="text/css">
+	   body {background:#FFF;padding:16px 16px 30px;}
+	   h1.hd, h2.hd {color:#333;padding:20px 0;margin:0;}
+	   h2.hd {border-top:1px solid #CCC;}
+	   .the-icons {
+			overflow:hidden;
+			padding:0 16px;
+	   }
+	   .the-icons li {
+			float:left;
+			line-height:16px;
+			margin-bottom:15px;
+			color:#333;
+			font-size:12px;
+			font-weight:bold;
+			width:16%;
+	   }
+	   .the-icons li span {
+			margin:0 5px;
+			float:left;
+			position:relative;
+	   }
+	   .the-icons-22 li {line-height:22px;}
+	   .the-icons-29 li {line-height:29px;}
+	   .the-icons-30 li {line-height:30px;}
+	   .the-icons-32 li {line-height:32px;}
+	   .the-icons-38 li {line-height:38px;}
+	   .the-icons-19-16 li {line-height:16px;}
+	   .the-icons-16-32 li {line-height:32px;}
+	   .works_space_block {
+			background:#DDD;
+			width:460px;
+			margin:0 auto 20px;
+			padding:20px;
+			border-radius:6px;
+	   }
+	   .auto_works_space_block {
+			background:#DDD;
+			margin:0 auto 20px;
+			padding:20px;
+			border-radius:6px;
+	   }
+	   .block-50 {
+			width:78px;
+			height:50px;
+			vertical-align:middle;
+			border:1px solid #333;
+			line-height:50px;
+			font-size:12px;
+			padding:5px;
+	   }
+	   .overflow-h12 {
+			padding:20px;
+			font-size:12px;
+			border:1px solid #333;
+			background:#98D1E8;
+	   }
+	   .hint {
+	   		color:red;
+	   }
+	   #content {
+			background:transparent;
+			min-height:100px;
+			border:none;
+	   }
+	   .col-12, .col-13, .col-14, .col-12-mid, .col-13-mid, .col-14-mid {
+	   		background:#DDDDDD;
+	   }
+	   code {
+	   		font-size:12px !important;
+	   }
+       .images_slideshow {
+		    height:358px !important;
+			width:980px !important;
+		}
+		.grid_using span {
+			background:#CCC;
+			display:inline-block;
+			padding:5px 0;
+			float:left;
+			text-align:center;
+			box-shadow:inset 1px 1px 1px #FFF;
+		}
+		.grid_using {
+			margin:10px 0;
+		}
+		#globalMW h2, #globalMW h3 {
+			border:0;
+		}
+		.features_items_list li {
+			padding:0;
+		}
+		.features_items_list li a {
+			text-decoration:none;
+			border-bottom:1px solid #DADADA;
+			display:inline-block;
+			padding:0 0 3px 0;
+			width:60%;
+			font-size:1.1em;
+		}
+		.font-16 { font-size:16px !important;}
+		.font-24 { font-size:24px !important;}
+		.font-32 { font-size:32px !important;}
+		ol.linenums {
+			padding:0 15px;
+		}
+		.talentera_icons_blocks [class^='i-'],.talentera_icons_blocks [class*=' i-'] {
+			border:3px solid #DADADA;
+			border-radius:5px;
+			background:#F1F1F1;
+			padding:8px;
+			margin:0 2px 5px 2px;
+			cursor:pointer;
+		}
+		.talentera_icons_blocks [class^='i-'][class$='-s']:after { padding:8px;}
+		.cv_section_icons [class^='i-']:before, .cv_section_icons [class*=' i-']:before {
+			font-size:40px;
+		}
+		.tooltip {
+			width:210px !important;
+		}
+		
+		/***************** D3 - Chart *****************/
+		.axis path,
+		.axis line {
+			fill: none;
+			stroke: #000;
+			shape-rendering: crispEdges;
+		}
+		
+		.bar {
+			fill: orange;
+		}
+		
+		.bar:hover {
+			fill: orangered ;
+		}
+		
+		.x.axis path {
+			display: none;
+		}
+		
+		.d3-tip {
+			line-height: 1;
+			font-weight: bold;
+			padding: 12px;
+			background: rgba(0, 0, 0, 0.8);
+			color: #fff;
+			border-radius: 2px;
+		}
+		
+		/* Creates a small triangle extender for the tooltip */
+		.d3-tip:after {
+			box-sizing: border-box;
+			display: inline;
+			font-size: 10px;
+			width: 100%;
+			line-height: 1;
+			color: rgba(0, 0, 0, 0.8);
+			content: "\25BC";
+			position: absolute;
+			text-align: center;
+		}
+		
+		/* Style northward tooltips differently */
+		.d3-tip.n:after {
+			margin: -1px 0 0 0;
+			top: 100%;
+			left: 0;
+		}
+    </style>
+</head>
+
+<body id="en">
+<h1>Lego Style Framework</h1>
+	<!-- Features Menu -->
+	<div class="grid-2 l">
+    	<ul class="flat_tabs_vert features_items_list pt blt_arrow">
+        	<li><a href="#typography_content" class="" title="">Typography</a></li>
+			<li><a href="#table_content" class="" title="">Table</a></li>
+			<li><a href="#notification_bubble" class="" title="">Bubble & Notification</a></li>
+			<li><a href="#main_sprite_content" class="" title="">CSS Sprite Icons</a></li>
+            <li><a href="#font_generator" class="" title="">Font Icon Generator</a></li>
+			<li><a href="#lego_content" class="" title="">Generic</a></li>
+            <li><a href="#accordion_slideshow_content" class="" title="">Accordion & Slideshow</a></li>
+			<li><a href="#modal_content" class="" title="">Modal/Dialog</a></li>
+			<li><a href="#html_email_generator" class="" title="">Html Email Generator</a></li>
+			<li><a href="#form_styles" class="" title="">Form</a></li>
+			<li><a href="#dropdowns" class="" title="">Dropdowns</a></li>
+			<li><a href="#widgets" class="" title="">Widgets</a></li>
+			<li><a href="#thumbs" class="" title="">Thumbs</a></li>
+			<li><a href="#charts" class="" title="">Charts</a></li>
+			<li><a href="#miscellaneous" class="" title="">Miscellaneous</a></li>
+		</ul>
+		<script type="text/javascript">
+			/*<![CDATA[*/
+				$(document).ready(function(){
+					$(".flat_tabs_vert a").on("click",function() {
+						$(".block_content").hide();
+						$(".flat_tabs_vert li").removeClass("on");
+						$(this).parent().addClass("on");
+						var activeTab = $(this).attr("href");
+						$(activeTab).show();
+					 	return false;
+					});
+				});
+			/*]]>*/
+		</script>
+    </div>
+	<!-- Main Content -->
+    <div class="grid-8 r">
+        <div class="main_content">
+        	<!-- Start main sprite content -->
+			</div>
+            <div id="typography_content" class="block_content">
+				<h2>Typography</h2>
+				<div>
+					<h1>H1: Lorem Ipsum is simply dummy text of the printing</h1>
+					<h2>H2: Lorem Ipsum is simply dummy text of the printing</h2>
+					<h3>H3: Lorem Ipsum is simply dummy text of the printing</h3>
+					<h4>H4: Lorem Ipsum is simply dummy text of the printing</h4>
+					<p>P, Body, H4-H6: Lorem Ipsum is simply dummy text of the printing</p>
+					<p>Mute: <span class="mute">Lorem Ipsum is simply dummy text of the printing</span></p>
+					<p>Highlight: <span class="hilite">Lorem Ipsum is simply dummy text of the printing</span></p>
+					<span class="font-l">Small:</span> <span class="small">Lorem Ipsum is simply dummy text of the printing</span>
+					<blockquote>Blockquotes: Lorem Ipsum is simply dummy text of the printing</blockquote>
+					<p>Red: <span class="red_color">Lorem Ipsum is simply dummy text of the printing</span></p>
+					<p>Green: <span class="green_color">Lorem Ipsum is simply dummy text of the printing</span></p>
+					<p>Gray: <span class="gray_color">Lorem Ipsum is simply dummy text of the printing</span></p>
+					<p>Blue: <span class="blue_color">Lorem Ipsum is simply dummy text of the printing</span></p>
+					<p>Default link: <a href="#">Lorem Ipsum is simply dummy text of the printing</a></p>
+					<p>Gray link: <a href="#" class="gLink">Lorem Ipsum is simply dummy text of the printing</a></p>
+					<p>Black link: <a href="#" class="bLink">Lorem Ipsum is simply dummy text of the printing</a></p>
+					<div>
+						<ul class="disc">
+							<li>It was popularised in the 1960s with the release</li>
+							<li>It was popularised in the 1960s with the release</li>
+							<li>It was popularised in the 1960s with the release</li>
+						</ul>
+						
+						<ul class="pt">
+							<li>It was popularised in the 1960s with the release</li>
+							<li>It was popularised in the 1960s with the release</li>
+							<li>It was popularised in the 1960s with the release</li>
+						</ul>
+						
+						<ul class="pt blt_arrow">
+							<li>It was popularised in the 1960s with the release</li>
+							<li>It was popularised in the 1960s with the release</li>
+							<li>It was popularised in the 1960s with the release</li>
+						</ul>
+						
+						<ul class="pt check_pt">
+							<li>It was popularised in the 1960s with the release</li>
+							<li>It was popularised in the 1960s with the release</li>
+							<li>It was popularised in the 1960s with the release</li>
+						</ul>
+						
+						<ul class="pt check_pt_bld">
+							<li>It was popularised in the 1960s with the release</li>
+							<li>It was popularised in the 1960s with the release</li>
+							<li>It was popularised in the 1960s with the release</li>
+						</ul>
+						
+						<ol>
+							<li>It was popularised in the 1960s with the release</li>
+							<li>It was popularised in the 1960s with the release
+								<ol>
+									<li>It was popularised in the 1960s with the release</li>
+									<li>It was popularised in the 1960s with the release</li>
+									<li>It was popularised in the 1960s with the release</li>
+								</ol>
+							</li>
+							<li>It was popularised in the 1960s with the release</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+			<div id="table_content" class="block_content hide">
+				<h2>Table</h2>
+				<div>
+					<table>
+						<thead>
+							<tr>
+								<td>No.</td>
+								<td>First name</td>
+								<td>Last name</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Col1 Body</td>
+								<td>Col2 Body</td>
+								<td>Col3 Body</td>
+							</tr>
+							<tr>
+								<td>Col1 Body</td>
+								<td>Col2 Body</td>
+								<td>Col3 Body</td>
+							</tr>
+						</tbody>
+					</table>
+					<br />
+					<table class="table_blank">
+						<thead>
+							<tr>
+								<td>No.</td>
+								<td>First name</td>
+								<td>Last name</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Col1 Body</td>
+								<td>Col2 Body</td>
+								<td>Col3 Body</td>
+							</tr>
+							<tr>
+								<td>Col1 Body</td>
+								<td>Col2 Body</td>
+								<td>Col3 Body</td>
+							</tr>
+						</tbody>
+					</table>
+					<br />
+					<table class="chart">
+						<thead>
+							<tr>
+								<td>Col1</td>
+								<td>Col2</td>
+								<td>Col3</td>
+								<td>Col4</td>		
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Col1 Body</td>
+								<td>Col2 Body</td>
+								<td>Col3 Body</td>
+								<td>
+									<div class="action-grp sm r">
+										<a class="action-item" href="javascript:;">Item1</a>
+										<a class="action-item" href="javascript:;">Item2</a>
+										<a class="action-item" href="javascript:;">Item3</a>
+									</div>
+								</td>
+							</tr>
+							<tr class="highlighted">
+								<td>Col1 Body</td>
+								<td>Col2 Body</td>
+								<td>Col3 Body</td>
+								<td>
+									<div class="action-grp sm r">
+										<a class="action-item" href="javascript:;">Item1</a>
+										<a class="action-item" href="javascript:;">Item2</a>
+										<a class="action-item" href="javascript:;">Item3</a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>Col1 Body</td>
+								<td>Col2 Body</td>
+								<td>Col3 Body</td>
+								<td>
+									<div class="action-grp sm r">
+										<a class="action-item" href="javascript:;">Item1</a>
+										<a class="action-item" href="javascript:;">Item2</a>
+										<a class="action-item" href="javascript:;">Item3</a>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<td>Col1 Footer</td>
+								<td>Col2 Footer</td>
+								<td>Col3 Footer</td>
+								<td>Col4 Footer</td>
+							</tr>
+						</tfoot>
+					</table>
+					<br />
+					<table class="chart2">
+						<thead>
+							<tr class="">
+								<td colspan="2">
+									<div>
+										<span class="action-btn"><input type="checkbox" name="checkall" /><i class="i-down-arrow"></i></span>
+										<a href="javascript:;" class="action-btn txt"><i class="i-cover-letter-16"></i>sadbasbdnm</a>
+										<a href="javascript:;" class="action-btn"><i class="i-export-16"></i></a>
+									</div>
+								</td>
+								<td colspan="2">
+									<div class="grid-5 r search_field">
+										<input type="text" class="searchbox" placeholder="Search" />
+										<i class="i-search"></i>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>Col1</td>
+								<td>Col2</td>
+								<td>Col3</td>
+								<td>&nbsp</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Col1 Body</td>
+								<td>Col2 Body</td>
+								<td>Col3 Body</td>
+								<td>
+									<div>
+										<div class="action-grp sm r">
+											<a class="action-item" href="javascript:;">Item1</a>
+											<a class="action-item" href="javascript:;">Item2</a>
+											<a class="action-item" href="javascript:;">Item3</a>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>Col1 Body</td>
+								<td>Col2 Body</td>
+								<td colspan="2">Col3 Body</td>
+							</tr>
+							<tr>
+								<td>Col1 Body</td>
+								<td>Col2 Body</td>
+								<td colspan="2"><div class="tTools">Tools</div></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div id="notification_bubble" class="block_content hide">
+				<h2>Notification</h2>
+				<div>
+					<div class="action_icon">
+						<a class="msg_clickable" href="#">
+							<i class="i-email-16"></i>
+						</a>
+						Click me
+						<div class="msg_clickable_block hide">
+							<ul class="dropdown-menu">
+								<li><a href="#"><i class="i-settings"></i> New Order</a></li>
+								<li class="sep"></li>
+								<li><a href="#"><i class="i-lock"></i> Anas Ibdah Applied fo..</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<h2>Default Tooltip</h2>
+				<div>
+					<h4 class="inline-b">Left Tooltip <span class="tooltip_left i-help-tip" data-tooltip="Hi, My name is Left tooltip asdasa <br /> asdasdas"></span></h4>
+					<h4 class="inline-b margin-sep-10">Right Tooltip <span class="tooltip_right i-help-tip" data-tooltip="Hi, My name is Right tooltip asdasa <br /> asdasdas"></span></h4>
+					<h4 class="inline-b margin-sep-10">Down Tooltip <span class="tooltip_down i-help-tip" data-tooltip="Hi, My name is Down tooltip asdasa <br /> asdasdas"></span></h4>
+					<h4 class="inline-b">Up Tooltip <span class="tooltip_up i-help-tip" data-tooltip="Hi, My name is Up tooltip asdasa <br /> asdasdas"></span></h4>
+				</div>
+				<h2>Bubble</h2>
+				<div>
+					<p><span class="error" id="err-position_sought"></span><input type="text" name="position_sought" value="" maxlength="100"   class="tooltip_element grid-4 tooltip_element"    /> <span class='tooltip hide  normal_tooltip' style='width:232px; '> <span class='tooltip_box r' style='width:200px'>List the job titles that best describe the position you are seeking. Separate multiple titles with commas.</span> <span class='tooltip_pointer l'></span> </span> </p>
+				</div>
+				<h2>Bubble</h2>
+				<div>
+					<h4 class="inline-b">Left Tooltip <span class="tooltip_left whiteb i-help-tip" data-tooltip="Hi, My name is Left tooltip asddasdd dgfrdfgd"></span></h4>
+					<h4 class="inline-b margin-sep-10">Right Tooltip <span class="tooltip_right whiteb i-help-tip" data-tooltip="Hi, My name is Right tooltip asddas wedasasda"></span></h4>
+					<h4 class="inline-b margin-sep-10">Down Tooltip <span class="tooltip_down whiteb i-help-tip" data-tooltip="Hi, My name is Down tooltip asds asds asdasdas"></span></h4>
+					<h4 class="inline-b">Up Tooltip <span class="tooltip_up whiteb i-help-tip" data-tooltip="Hi, My name is Up tooltip Up tooltip<br />Up tooltip Up tooltip Up tooltip Up tooltip adasd asdasdasd"></span></h4>
+				</div>
+				<h2>Advanced Bubble</h2>
+				<div>
+					<h4 class="inline-b">
+						<span class="msg_hover">Hover Me!!!</span>
+						<div class="msg_hover_block hide">
+							<div class="grid-3 l padding_right_10"><img src="http://192.168.6.16:8027/images/lego/img_placholder.png" class="" alt="" /></div>
+							<div class="grid-7 l">
+								<b>Lorem Ipsum</b><br />
+								is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+								when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+								remaining essentially unchanged.
+							</div>
+						</div>
+					</h4>
+				</div>
+			</div>
+			<div id="main_sprite_content" class="block_content hide">
+            	<div class="">
+					<div class="hide">
+						<h2>Lego Icons</h2>
+	                    <div class="talentera_icons_blocks">
+	                        <p>
+								<span class="i-task" title="i-task"></span>
+								<span class="i-task i-add-s" title="i-task i-add-s"></span>
+	                            <span class="i-task i-delete-s" title="i-task i-delete-s"></span>
+								
+								<span class="i-screening-questionnaire" title="i-screening-questionnaire"></span>
+								<span class="i-screening-questionnaire i-add-s" title="i-screening-questionnaire i-add-s"></span>
+	                            <span class="i-screening-questionnaire i-delete-s" title="i-screening-questionnaire i-delete-s"></span>
+	
+								<span class="i-note" title="i-note"></span>
+								<span class="i-note i-add-s" title="i-note i-add-s"></span>
+	                            <span class="i-note i-delete-s" title="i-note i-delete-s"></span>
+	
+								<span class="i-message" title="i-message"></span>
+								<span class="i-message i-add-s" title="i-message i-add-s"></span>
+	                            <span class="i-message i-delete-s" title="i-message i-delete-s"></span>
+								
+								<span class="i-job" title="i-job"></span>
+								<span class="i-job i-add-s" title="i-job i-add-s"></span>
+	                            <span class="i-job i-delete-s" title="i-job i-delete-s"></span>
+								
+								<span class="i-folder" title="i-folder"></span>
+								<span class="i-folder i-add-s" title="i-folder i-add-s"></span>
+	                            <span class="i-folder i-delete-s" title="i-folder i-delete-s"></span>
+								
+								<span class="i-evaluation-form" title="i-evaluation-form"></span>
+								<span class="i-evaluation-form i-add-s" title="i-evaluation-form i-add-s"></span>
+	                            <span class="i-evaluation-form i-delete-s" title="i-evaluation-form i-delete-s"></span>
+								
+								<span class="i-evaluation-form" title="i-evaluation-form"></span>
+								<span class="i-evaluation-form i-add-s" title="i-evaluation-form i-add-s"></span>
+	                            <span class="i-evaluation-form i-delete-s" title="i-evaluation-form i-delete-s"></span>
+								
+	                        	<span class="i-tag" title="i-tag"></span>
+								<span class="i-tag i-add-s" title="i-tag i-add-s"></span>
+	                            <span class="i-tag i-delete-s" title="i-tag i-delete-s"></span>
+	                        </p>
+							<h3>CV Options</h3>
+							<p>
+	                        	<span class="i-cv"></span>
+								<span class="i-cv i-add-s"></span>
+	                            <span class="i-cv i-delete-s"></span>
+								<span class="i-cv i-share-twitter-s"></span>
+	                            <span class="i-cv i-share-s"></span>
+								<span class="i-cv i-share-facebook-s"></span>
+								<span class="i-cv i-share-cv-on-bayt-s"></span>
+								<span class="i-cv i-cv-coming-from-bayt-s"></span>
+								<span class="i-cv i-send-s"></span>
+								<span class="i-cv i-search-s"></span>
+								<span class="i-cv i-save-s"></span>
+								<span class="i-cv i-report-s"></span>
+								<span class="i-cv i-reply-s"></span>
+								<span class="i-cv i-print-s"></span>
+								<span class="i-cv i-move-s"></span>
+								<span class="i-cv i-invite-apply-s"></span>
+								<span class="i-cv i-incomplete-s"></span>
+								<span class="i-cv i-history-s"></span>
+								<span class="i-cv i-export-s"></span>
+								<span class="i-cv i-email-s"></span>
+								<span class="i-cv i-edit-s"></span>
+								<span class="i-cv i-copy-s"></span>
+								<span class="i-cv i-complete-s"></span>
+								<span class="i-cv i-active-inactive-s"></span>
+								<span class="i-cv i-action-menu-s"></span>
+	                        </p>
+							<h3>Other Icons</h3>
+							<p>
+								<span class="i-video" title="i-video"></span>
+								<span class="i-up-arrow" title="i-up-arrow"></span>
+								<span class="i-settings" title="i-settings"></span>
+								<span class="i-separator" title="i-separator"></span>
+								<span class="i-sent" title="i-sent"></span>
+								<span class="i-search" title="i-search"></span>
+								<span class="i-save" title="i-save"></span>
+								<span class="i-rss-feeds" title="i-rss-feeds"></span>
+								<span class="i-right-arrow" title="i-right-arrow"></span>
+								<span class="i-recommendation" title="i-recommendation"></span>
+								<span class="i-print" title="i-print"></span>
+								<span class="i-previous" title="i-previous"></span>
+								<span class="i-next" title="i-next"></span>
+								<span class="i-left-arrow" title="i-left-arrow"></span>
+								<span class="i-info-tip" title="i-info-tip"></span>
+								<span class="i-inbox" title="i-inbox"></span>
+								<span class="i-help-tip" title="i-help-tip"></span>
+								<span class="i-expand" title="i-expand"></span>
+								<span class="i-edit" title="i-edit"></span>
+								<span class="i-down-arrow" title="i-down-arrow"></span>
+								<span class="i-descending-sorting" title="i-descending-sorting"></span>
+								<span class="i-delete" title="i-delete"></span>
+								<span class="i-collapse" title="i-collapse"></span>
+								<span class="i-close" title="i-close"></span>
+								<span class="i-bullet" title="i-bullet"></span>
+								<span class="i-ascending-sorting" title="i-ascending-sorting"></span>
+								<span class="i-archive-message" title="i-archive-message"></span>
+								<span class="i-archive" title="i-archive"></span>
+								<span class="i-add-inside-circle" title="i-add-inside-circle"></span>
+								<span class="i-add" title="i-add"></span>
+							</p>
+							<p>
+								<span>
+									<i class="i-cv tooltip_down"></i>
+									<span class="tooltip_down_text hide">Text Tool Tip Here! Text Tool Tip Here!</span>
+								</span>
+							</p>
+	                    </div>
+						<h2>New Icons</h2>
+						<h3>CV Section Icons</h3>
+	                    <div class="talentera_icons_blocks">
+							<p class="cv_section_icons">
+								<span class="i-contact-information" title="i-contact-information"></span>
+								<span class="i-cover-letter" title="i-cover-letter"></span>
+								<span class="i-education" title="i-education"></span>
+								<span class="i-hobbies-interests" title="i-hobbies-interests"></span>
+								<span class="i-languages" title="i-languages"></span>
+								<span class="i-memebership" title="i-memebership"></span>
+								<span class="i-original-cv-attachment" title="i-original-cv-attachment"></span>
+								<span class="i-personal-information" title="i-personal-information"></span>
+								<span class="i-recommendations" title="i-recommendations"></span>
+								<span class="i-references" title="i-references"></span>
+								<span class="i-cv-skills" title="i-cv-skills"></span>
+								<span class="i-specialities" title="i-specialities"></span>
+								<span class="i-target-job" title="i-target-job"></span>
+								<span class="i-training-certification" title="i-training-certification"></span>
+								<span class="i-video-40" title="i-video-40"></span>
+								<span class="i-work-experience" title="i-work-experience"></span>
+							</p>
+							<h3>CV Action Icons</h3>
+	                    	<div class="talentera_icons_blocks">
+								<span class="i-applications-16" title="i-applications-16"></span>
+								<span class="i-application-status-16" title="i-application-status-16"></span>
+								<span class="i-attachment-16" title="i-attachment-16"></span>
+								<span class="i-copy-16" title="i-copy-16"></span>
+								<span class="i-cover-letter-16" title="i-cover-letter-16"></span>
+								<span class="i-delete-16" title="i-delete-16"></span>
+								<span class="i-duplicate-check-16" title="i-duplicate-check-16"></span>
+								<span class="i-email-16" title="i-email-16"></span>
+								<span class="i-evaluation-form-16" title="i-evaluation-form-16"></span>
+								<span class="i-export-16" title="i-export-16"></span>
+								<span class="i-interview-16" title="i-interview-16"></span>
+								<span class="i-mark-as-hired-16" title="i-mark-as-hired-16"></span>
+								<span class="i-move-to-application-16" title="i-move-to-application-16"></span>
+								<span class="i-move-to-folder-16" title="i-move-to-folder-16"></span>
+								<span class="i-note-16" title="i-note-16"></span>
+								<span class="i-print-16" title="i-print-16"></span>
+								<span class="i-screening-questionnaire-16" title="i-screening-questionnaire-16"></span>
+								<span class="i-share-16" title="i-share-16"></span>
+								<span class="i-s-report-16" title="i-s-report-16"></span>
+								<span class="i-tag-16" title="i-tag-16"></span>
+								<span class="i-task-16" title="i-task-16"></span>
+								<span class="i-reply" title="i-reply"></span>
+							</div>
+						</div>
+					</div>
+                    <h2>7 X 7</h2>
+                    <ul class="the-icons">
+                        <li><span class="i_square_blue i_16_item"></span>i_square_blue</li>
+                        <li><span class="i_square_grey i_16_item"></span>i_square_grey</li>
+                    </ul>
+                
+                    <h2>16 X 16</h2>
+                    <ul class="the-icons">
+                        <li><span class="question_blt i_16_item"></span>question_blt</li>
+                        <li><span class="i_edit i_16_item"></span>i_edit</li>
+                        <li><span class="i_write_question i_16_item"></span>i_write_question</li>
+                        <li><span class="i_top_ranked i_16_item"></span>i_top_ranked</li>
+                        <li><span class="i_contact i_16_item"></span>i_contact</li>
+                        <li><span class="i_twitter i_16_item"></span>i_twitter</li>
+                        <li><span class="i_website i_16_item"></span>i_website</li>
+                        <li><span class="i_delete i_16_item"></span>i_delete</li>
+                        <li><span class="i_add i_16_item"></span>i_add</li>
+                        <li><span class="i_download_cv i_16_item"></span>i_download_cv</li>
+                        <li><span class="i_print i_16_item"></span>i_print</li>
+                        <li><span class="i_copy i_16_item"></span>i_copy</li>
+                        <li><span class="i_arrow_lightgray i_16_item"></span>i_arrow_lightgray</li>
+                        <li><span class="i_arrow_gray i_16_item"></span>i_arrow_gray</li>
+                        <li><span class="i_arrow_blue i_16_item"></span>i_arrow_blue</li>
+                        <li><span class="i_arrow_black i_16_item"></span>i_arrow_black</li>
+                        <li><span class="i_alert i_16_item"></span>i_alert</li>
+                        <li><span class="i_invite i_16_item"></span>i_invite</li>
+                        <li><span class="i_task i_16_item"></span>i_task</li>
+                        <li><span class="i_sendmail i_16_item"></span>i_sendmail</li>
+                        <li><span class="i_star i_16_item"></span>i_star</li>
+                        <li><span class="i_separator i_16_item"></span>i_separator</li>
+                        <li><span class="i_close i_16_item"></span>i_close</li>
+                        <li><span class="i_close_dark i_16_item"></span>i_close_dark</li>
+                        <li><span class="i_arrow2_black i_16_item"></span>i_arrow2_black</li>
+                        <li><span class="i_arrow2_gray i_16_item"></span>i_arrow2_gray</li>
+                        <li><span class="i_yes_sign i_16_item"></span>i_yes_sign</li>
+                        <li><span class="i_arrow2 i_16_item"></span>i_arrow2</li>
+                        <li><span class="i_arrow_mark i_16_item"></span>i_arrow_mark</li>
+                        <li><span class="i_arrow_title i_16_item"></span>i_arrow_title</li>
+                        <li><span class="i_voteup i_16_item"></span>i_voteup</li>
+                        <li><span class="i_16_item" style="background-position:-112px -32px;"></span>i_voteup.on</li>
+                        <li><span class="i_votedown i_16_item"></span>i_votedown</li>
+                        <li><span class="i_16_item" style="background-position:-128px -32px;"></span>i_votedown.on</li>
+                        <li><span class="i_incr i_16_item"></span>i_incr</li>
+                        <li><span class="i_decr i_16_item"></span>i_decr</li>
+                        <li><span class="i_arrow_left_black i_16_item"></span>i_arrow_left_black</li>
+                        <li><span class="i_arrow_right_white i_16_item"></span>i_arrow_right_white</li>
+                        <li><span class="i_active_arrow i_16_item"></span>i_active_arrow</li>
+                        <li><span class="i_follow i_16_item"></span>i_follow</li>
+                        <li><span class="i_add_another i_16_item"></span>i_add_another</li>
+                        <li><span class="i_cv_preview i_16_item"></span>i_cv_preview</li>
+                        <li><span class="i_cv_add i_16_item"></span>i_cv_add</li>
+                        <li><span class="i_info i_16_item"></span>i_info</li>
+                        <li><span class="i_info2 i_16_item"></span>i_info2</li>
+                        <li><span class="i_jjoin2 i_16_item"></span>i_jjoin2</li>
+                        <li><span class="i_save i_16_item"></span>i_save</li>
+                        <li><span class="i_mobile i_16_item"></span>i_mobile</li>
+                        <li><span class="i_blog i_16_item"></span>i_blog</li>
+                        <li><span class="i_rss i_16_item"></span>i_rss</li>
+                        <li><span class="i_twitter2 i_16_item"></span>i_twitter2</li>
+                        <li><span class="i_facebook i_16_item"></span>i_facebook</li>
+                        <li><span class="i_youtube i_16_item"></span>i_youtube</li>
+                        <li><span class="i_googleplus i_16_item"></span>i_googleplus</li>
+                        <li><span class="i_linkedin i_16_item"></span>i_linkedin</li>
+                        <li><span class="i_cv_writing i_16_item"></span>i_cv_writing</li>
+                        <li><span class="i_stream_follow i_16_item"></span>i_stream_follow</li>
+                        <li><span class="i_stream_vote i_16_item"></span>i_stream_vote</li>
+                        <li><span class="i_social_recommend i_16_item"></span>i_social_recommend</li>
+                        <li><span class="i_social_unfollow i_16_item"></span>i_social_unfollow</li>
+                        <li><span class="i_social_follow i_16_item"></span>i_social_follow</li>
+                        <li><span class="i_tag_close i_16_item"></span>i_tag_close</li>
+                        <li><span class="i_cv_writing_support i_16_item"></span>i_cv_writing_support</li>
+                        <li><span class="i_answer i_16_item"></span>i_answer</li>
+                        <li><span class="i_arrow_white i_16_item"></span>i_arrow_white</li>
+                        <li><span class="i_questionnaire i_16_item"></span>i_questionnaire</li>
+                        <li><span class="i_attachment i_16_item"></span>i_attachment</li>
+                        <li><span class="i_undo i_16_item"></span>i_undo</li>
+                        <li><span class="i_arrow_gray_up i_16_item"></span>i_arrow_gray_up</li>
+                        <li><span class="i_arrow_black_down i_16_item"></span>i_arrow_black_down</li>
+                        <li><span class="i_expand i_16_item"></span>i_expand</li>
+                        <li><span class="i_collapse i_16_item"></span>i_collapse</li>
+                        <li><span class="i_tools i_16_item"></span>i_tools</li>
+                        <li><span class="i_print_cv i_16_item"></span>i_print_cv</li>
+                        <li><span class="i_tag i_16_item"></span>i_tag</li>
+                        <li><span class="i_note i_16_item"></span>i_note</li>
+                        <li><span class="i_note_red i_16_item"></span>i_note_red</li>
+                        <li><span class="i_taq_red i_16_item"></span>i_taq_red</li>
+                        <li><span class="i_viewed_red i_16_item"></span>i_viewed_red</li>
+                        <li><span class="i_attachment_red i_16_item"></span>i_attachment_red</li>
+                        <li><span class="i_cv_attachment i_16_item"></span>i_cv_attachment</li>
+                        <li><span class="i_cv_video i_16_item"></span>i_cv_video</li>
+                        <li><span class="i_cv_recommendation i_16_item"></span>i_cv_recommendation</li>
+                        <li><span class="i_warning i_16_item"></span>i_warning</li>
+                        <li><span class="i_snippet i_16_item"></span>i_snippet</li>
+                        <li><span class="i_lock i_16_item"></span>i_lock</li>
+                        <li><span class="i_target i_16_item"></span>i_target</li>
+                        <li><span class="i_ask_modal_arrow i_16_item" style="left:auto;top:auto;"></span>i_ask_modal_arrow</li>
+                        <li><span class="i_language i_16_item"></span>i_language</li>
+                        <li><span class="i_twitter3 i_16_item"></span>i_twitter3</li>
+                        <li><span class="i_block_gray i_16_item"></span>i_block_gray</li>
+                        <li><span class="i_contact1 i_16_item"></span>i_contact1</li>
+                        <li><span class="i_settings i_16_item"></span>i_settings</li>
+                    </ul>
+                    
+                    <h2>22 X 22</h2>
+                    <ul class="the-icons the-icons-22">
+                        <li><span class="i_pgr_prev i_16_item"></span>i_pgr_prev</li>
+                        <li><span class="i_pgr_prev_actv i_16_item"></span>i_pgr_prev_actv</li>
+                        <li><span class="i_pgr_nxt i_16_item"></span>i_pgr_nxt</li>
+                        <li><span class="i_pgr_nxt_actv i_16_item"></span>i_pgr_nxt_actv</li>
+                    </ul>
+                
+                    <h2>29 X 29</h2>
+                    <ul class="the-icons the-icons-29">
+                        <li><span class="i_vote_up i_16_item"></span>i_vote_up</li>
+                        <li><span class="i_vote_down i_16_item"></span>i_vote_down</li>
+                        <li><span class="i_vote_up i_16_item" style="background-position:-257px -193px;"></span>i_vote_up</li>
+                        <li><span class="i_vote_down i_16_item" style="background-position:-257px -225px;"></span>i_vote_down</li>
+                        <li><span class="i_vote_up owner i_16_item"></span>i_vote_up.owner</li>
+                        <li><span class="i_vote_down owner i_16_item"></span>i_vote_down.owner</li>
+                    </ul>
+                
+                    <h2>30 X 30</h2>
+                    <ul class="the-icons the-icons-30">
+                        <li><span class="i_facebook_icon i_16_item"></span>i_facebook_icon</li>
+                        <li><span class="i_google_icon i_16_item"></span>i_google_icon</li>
+                    </ul>
+                
+                    <h2>32 X 32</h2>
+                    <ul class="the-icons the-icons-32">
+                        <li><span class="i_search i_16_item"></span>i_search</li>
+                        <li><span class="i_cv_icon i_16_item"></span>i_cv_icon</li>
+                        <li><span class="i_love i_16_item"></span>i_love</li>
+                    </ul>
+                
+                    <h2>38 X 38</h2>
+                    <ul class="the-icons the-icons-38">
+                        <li><span class="i_endorse i_16_item"></span>i_endorse</li>
+                        <li><span class="i_endorsed i_16_item"></span>i_endorsed</li>
+                    </ul>
+                
+                    <h2>19 X 16</h2>
+                    <ul class="the-icons the-icons-19-16">
+                        <li><span class="i_list_view i_16_item"></span>i_list_view</li>
+                        <li><span class="i_list_active i_16_item"></span>i_list_active</li>
+                        <li><span class="i_grid_view i_16_item"></span>i_grid_view</li>
+                        <li><span class="i_grid_active i_16_item"></span>i_grid_active</li>
+                    </ul>
+                
+                    <h2>16 X 32</h2>
+                    <ul class="the-icons the-icons-16-32">
+                        <li><span class="i_sstory i_16_item"></span>i_sstory</li>
+                        <li><span class="i_jjoin i_16_item"></span>i_jjoin</li>
+                    </ul>
+                
+                    <h2>32 X 16</h2>
+                    <ul class="the-icons">
+                        <li><span class="i_bayt_small i_16_item"></span>i_bayt_small</li>
+                        <li><span class="i_bayt_grey i_16_item"></span>i_bayt_grey</li>
+                    </ul>
+                
+                    <h2>Others</h2>
+                    <ul class="the-icons">
+                        <li><span class="i_add_specialty i_16_item"></span>i_add_specialty</li>
+                        <li><span class="i_homepage i_16_item"></span>i_homepage</li>
+                        <li><span class="i_yes_signbig i_16_item"></span>i_yes_signbig</li>
+                        <li><span class="i_modal_arrow i_16_item" style="bottom:0;"></span>i_modal_arrow</li>
+                        <li><span class="i_bayt i_16_item"></span>i_bayt</li>
+                        <li style="line-height:40px"><span class="i_recommend i_16_item"></span>i_recommend</li>
+                        <li style="line-height:36px"><span class="i_recommend_count i_16_item"></span>i_recommend_count</li>
+                        <li><span class="i_social_invite i_16_item"></span>i_social_invite</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>CSS Sprite Use</h2>
+                    <div style="padding:0 20px 20px;">
+                        <h3 style="margin:0 0 5px;">1) icon with wrapper</h3>
+                        <h4>.i_16_wrapper, .i_16_item</h4>
+                        <p>
+                        <code>&lt;p class="i_16_wrapper"&gt;<br />
+                            &nbsp;&nbsp;&nbsp; &lt;i class="i_16_item i_blog"&gt;&lt;/i&gt; <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp; Bayt Blog<br />
+                        &lt;/p&gt;</code>
+                        </p>
+                        
+                        <p class="i_16_wrapper">
+                            <i class="i_16_item i_blog"></i>
+                            Bayt Blog
+                        </p>
+                        
+                        <p class="hint">*hint: when you use i_16_item you must put i_16_wrapper class for the parent</p>
+                        
+                        <h3 style="margin:0 0 5px;">2) Just icon</h3>
+                        <h4>.i_16</h4>
+                            <p>
+                            <code>&lt;i class="i_16 i_tools"&gt;&lt;/i&gt;</code>
+                            </p>
+                            <i class="i_16 i_tools"></i>
+                    </div>
+                </div>
+            </div>
+			<!-- Start font_generator -->
+			<div id="font_generator" class="block_content hide">
+				<h1 class="hd">Bayt Font Generator</h1>
+				<div>
+					<iframe width="80%" height="600px" src="http://192.168.6.26:3000/"></iframe>
+				</div>
+			</div>
+            <!-- Start lego content -->
+            <div id="lego_content" class="block_content hide">
+				<h2 class="hd">Buttons</h2>
+				<div>
+					<p>
+						<button class="btn small">I am a Small Button</button>
+						<button class="btn">I am a Default Button</button>
+						<button class="btn large">I am a Large Button</button>
+						<button class="btn large grid-3 r">I am a Large Button</button>
+						<button class="large grid-3 text-l r">I am a Large Button</button>
+					</p>
+				</div>
+				<div>
+					<p>
+						<a class="btn small" href="javascript:;"><i class="i-hiring-approval-nav-16"></i> I am a Small Button</a>
+						<button class="button-s"><i class="i-hiring-approval-nav-16"></i> I am a Default Button</button>
+						<a class="button-s large" href="javascript:;"><i class="i-hiring-approval-nav-16"></i> I am a Large Button</a>
+					</p>
+				</div>
+				<h2 class="hd">Secondary Buttons</h2>
+				<div>
+					<p class="overflow-h">
+						<button class="btn small gry"><i class="i-hiring-approval-nav-16"></i> I am a Small Button</button>
+						<button class="btn gry"><i class="i-hiring-approval-nav-16"></i> I am a Default Button</button>
+						<button class="btn large gry"><i class="i-hiring-approval-nav-16"></i> I am a Large Button</button>
+						
+						<button class="btn gry large grid-3 r">I am a Large Button</button>
+						<button class="large gry grid-3 text-l r">I am a Large Button</button>
+					</p>
+				</div>
+				<h2 class="hd">Multi Colors Buttons</h2>
+				<div>
+					<p class="overflow-h">
+						<button class="btn"><i class="i-hiring-approval-nav-16"></i> I am a Default Button</button>
+						<button class="btn bg_ldgreen"><i class="i-hiring-approval-nav-16"></i> I am a Success Button</button>
+						<button class="btn bg_yellow"><i class="i-hiring-approval-nav-16"></i> I am a Warning Button</button>
+						<button class="btn bg_red"><i class="i-hiring-approval-nav-16"></i> I am a Danger Button</button>
+					</p>
+				</div>
+				<h2 class="hd">Breadcrumb</h2>
+				<div>
+					<p itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" id="breadcrumbs">
+						<a itemprop="url" href="/"><span itemprop="title">Home</span></a>
+						/ <a itemprop="url" href="/en/myworkspace-j/"><span itemprop="title">Dashboard</span></a>
+						/ Mailbox</p>
+				</div>
+            	<h2 class="hd">.l, .r, .overflow-h, .c-block</h2>
+                <div class="works_space_block">
+                    <div class="overflow-h overflow-h12">
+                        <p class="c">overflow-h</p>
+                        <div class="l block-50 c">l</div>
+                        <div class="r block-50 c">r</div>
+                        <br class="clear" />
+                        <div class="block-50 c c-block">c-block</div>
+                    </div>
+                </div>
+                <h2 class="hd">.text-l, .text-r, .c</h2>
+                <div class="works_space_block">
+                    <div>
+                        <p class="block-50 text-l" style="width:100px">text-l</p>
+                        <p class="block-50 text-r" style="width:100px">text-r</p>
+                        <p class="block-50 c">c</p>
+                    </div>
+                </div>
+                <h2 class="hd">.col-12, .col-13, .col-14</h2>
+                <div id="frame-fullpage">
+                    <div id="content">
+                        <div class="c-block" style="overflow:hidden;">
+                            <div class="col-12 c l">
+                                <p>col-12</p>
+                            </div>
+                            <div class="col-12 c r">
+                                <p>col-12</p>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="c-block" style="overflow:hidden;">
+                            <div class="col-13 c l">
+                                <p>col-13</p>
+                            </div>
+                            <div class="col-13-mid c l">
+                                <p>col-13</p>
+                            </div>
+                            <div class="col-13 c r">
+                                <p>col-13</p>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="c-block" style="overflow:hidden;">
+                            <div class="col-14 c l">
+                                <p>col-14</p>
+                            </div>
+                            <div class=" col-14-mid c l">
+                                <p>col-14</p>
+                            </div>
+                            <div class="col-14-mid c l">
+                                <p>col-14</p>
+                            </div>
+                            <div class="col-14 c r">
+                                <p>col-14</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+				<br class="clear" />
+				<h2 class="hd">Grid</h2>
+				<div class="">
+					<div class="grid_using grid-row">
+						<span class="grid-1">.grid-1</span>
+						<span class="grid-2">.grid-2</span>
+						<span class="grid-3">.grid-3</span>
+						<span class="grid-4">.grid-4</span>
+					</div>
+					<div class="grid_using grid-row">
+						<span class="grid-5">.grid-5</span>
+						<span class="grid-5">.grid-5</span>
+					</div>
+					<div class="grid_using grid-row">
+						<span class="grid-6">.grid-6</span>
+						<span class="grid-4">.grid-4</span>
+					</div>
+					<div class="grid_using grid-row">
+						<span class="grid-7">.grid-7</span>
+						<span class="grid-3">.grid-3</span>
+					</div>
+					<div class="grid_using grid-row">
+						<span class="grid-8">.grid-8</span>
+						<span class="grid-2">.grid-2</span>
+					</div>
+					<div class="grid_using grid-row">
+						<span class="grid-9">.grid-9</span>
+						<span class="grid-1">.grid-1</span>
+					</div>
+					<div class="grid_using grid-row">
+						<span class="grid-10">.grid-10</span>
+					</div>
+				</div>
+				<br class="clear" />
+            </div>
+            <!-- Start plugin content -->
+            <div id="accordion_slideshow_content" class="block_content hide">
+            	<!-- Start Accordion Plugin -->
+                <h2 class="hd">Accordion</h2>
+                <h2 class="accordion_head on" style="border:none;"><i class="i_16 i_arrow2_gray l"></i>Head</h2>
+                    <div class="accordion_body"><p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form,
+					by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as</p></div>
+                    <h2 class="accordion_head" style="border:none;"><i class="i_16 i_arrow2_gray l"></i>Head</h2>
+                    <div class="accordion_body hide"><p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in
+					some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as</p></div>
+                <br />
+                <p>Code:</p>
+                <pre class="prettyprint lang-html linenums">
+&lth2 class="accordion_head"&gt;&lti class="i_16 i_arrow2_gray l"&gt;&lt/i&gt;Head1&lt/h2&gt;
+&ltdiv class="accordion_body hide"&gt;
+    &ltp&gt;There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as&lt/p&gt;
+    
+&lth2 class="accordion_head"&gt; &lti class="i_16 i_arrow2_gray l"&gt;&lt/i&gt;Head2&lt/h2&gt;
+&ltdiv class="accordion_body hide"&gt;
+    &ltp&gt;There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as&lt/p&gt;
+&lt/div&gt;
+				</pre>
+                <!-- Start Flat Tabs -->
+                <h2 class="hd">Flat Tabs</h2>
+                <ul class="flat_tabs">
+                    <li class="on"><a href="#tab1">Tab 1</a></li>
+                    <li><a href="#tab2">Tab 2</a></li>
+                </ul>
+                <div id="tab1" class="flat_tabs_box">
+                    <p>Tab <b>1</b> Body</p>
+                </div>
+                <div id="tab2" class="flat_tabs_box hide">
+                    <p>Tab <b>2</b> Body</p>
+                </div>
+                <br />
+                <p>Code:</p>
+                <pre class="prettyprint lang-html linenums">
+&ltul class="flat_tabs"&gt;
+    &ltli class="on"&gt;
+        &lta href="#tab1"&gt;Tab 1&lt/a&gt;
+    &lt/li&gt;
+    &ltli&gt;
+        &lta href="#tab2"&gt;Tab 2&lt/a&gt;
+    &lt/li&gt;
+&lt/ul&gt;
+&ltdiv id="tab1" class="flat_tabs_box"&gt;
+    &ltp&gt;Tab 1 Body&lt/p&gt;
+&lt/div&gt;
+&ltdiv id="tab2" class="flat_tabs_box hide"&gt;
+    &ltp&gt;Tab 2 Body&lt/p&gt;
+&lt/div&gt;
+                    </pre>
+					
+				<!-- Start Default Tabs -->
+                <h2 class="hd">Default Tabs</h2>
+                <ul class="flat_tabs tabs">
+                    <li class="on"><a href="#tab3">Tab 1</a></li>
+                    <li><a href="#tab4">Tab 2</a></li>
+                </ul>
+                <div id="tab3" class="flat_tabs_box">
+                    <p>Tab <b>1</b> Body</p>
+                </div>
+                <div id="tab4" class="flat_tabs_box hide">
+                    <p>Tab <b>2</b> Body</p>
+                </div>
+				<!-- Start Border Tabs -->
+                <h3 class="hd">Border Tabs</h3>
+                <ul class="flat_tabs tborder">
+                    <li class="on"><a href="#tab5">Tab 1</a></li>
+                    <li><a href="#tab6">Tab 2</a></li>
+                </ul>
+                <div id="tab5" class="flat_tabs_box">
+                    <p>Tab <b>1</b> Body</p>
+                </div>
+                <div id="tab6" class="flat_tabs_box hide">
+                    <p>Tab <b>2</b> Body</p>
+                </div>
+                <!-- Start Slide Show plugin -->
+				<div>
+	                <h3 class="hd">Slide Show Proc</h3>
+	                <h3>1) Slide Show with Blts Paginator</h3>
+					<div style="overflow:hidden;position:relative;">
+		                <div class="images_slideshow images_slideshow_js_1 " style="margin:0;height:358px;width:980px;">
+				<img src="http://192.168.6.16:8027/images/career_services/header_reasons_join_en.jpg" alt=""  class="img1 slideshow_active" />
+			
+				<img  alt="" data-src="http://192.168.6.16:8027/images/career_services/header_reasons_join_ar.jpg" class="img2 " />
+			
+				<img  alt="" data-src="http://192.168.6.16:8027/images/career_services/header_reasons_join_fr.jpg" class="img3 " />
+			</div> <div class="images_slideshow-paginator images_slideshow_js_1-paginator blts " style="width:980px">
+						<span class="img1" id="current"></span>
+					
+						<span class="img2" ></span>
+					
+						<span class="img3" ></span>
+					</div> <script type="text/javascript">
+		//<![CDATA[
+			//SLIDE SHOW START
+			var slideshow_timer_1 = "";
+			function start_slider_1() {
+				if ( 0 ) {
+					var images_count=$(".images_slideshow_js_1 div.img").length;
+				} else {
+					var images_count=$(".images_slideshow_js_1 > img").length;
+				}
+				if( images_count > 1 && ( (!0 && !$(".images_slideshow_js_1 img").hasClass("read")) || (0 && !$(".images_slideshow_js_1 div.img").hasClass("read")) ) ) {
+					slideshow_timer_1 = setInterval( "slideSwitch_1()",5000 );
+				}
+			}
+			function stop_slider_1() {
+				clearInterval(slideshow_timer_1);
+			}
+			function slideSwitch_1() {
+				if ( 0 ) {
+					var active = $('.images_slideshow_js_1 div.slideshow_active');
+				} else {
+					var active = $('.images_slideshow_js_1 img.slideshow_active');
+				}
+
+				var pagination = $(".images_slideshow_js_1 .slideshow_active").attr("class").split(" ");
+				pagination = pagination[0];
+				$(".images_slideshow_js_1-paginator ."+pagination).attr("id","");
+
+				// Check if there is an image after the prev image
+				if ( 0 ) {
+						var next =  active.next().length ? active.next() : $('.images_slideshow_js_1 div:first');
+				} else {
+					var next =  active.next().length ? active.next() : $('.images_slideshow_js_1 img:first');
+				}
+
+				active.addClass('last-active');
+				$(".images_slideshow_js_1-paginator span").unbind("click");
+				next.css({opacity: 0.0})
+					.addClass('slideshow_active')
+					.animate({opacity: 1.0}, 800, function() {
+						active.removeClass('slideshow_active last-active');
+						var pagination = $(".images_slideshow_js_1 .slideshow_active").attr("class").split(" ");
+						pagination = pagination[0];
+						$(".images_slideshow_js_1-paginator ."+pagination).attr("id","current");
+						pagination_click_1();
+					});
+			}
+			function request_images_1() {
+				$(".images_slideshow_js_1 img").each(function(){
+					var img_src = $(this).attr("data-src");
+					$(this).attr("src",img_src);
+				});
+			}
+
+			function pagination_click_1() {
+				$(".images_slideshow_js_1-paginator span").click(
+				function () {
+					stop_slider_1();
+					var img = $(this).attr("class");
+					$(".images_slideshow_js_1 .slideshow_active").removeClass('slideshow_active');
+					$(".images_slideshow_js_1 ."+img).addClass("slideshow_active");
+					$(".images_slideshow_js_1-paginator #current").removeAttr("id");
+					$(this).attr("id","current");
+					start_slider_1();
+				});
+			}
+
+			if ( 0 ) {
+				$(".images_slideshow_js_1 div.img").hover(
+					function(){
+						$(this).addClass("read");
+						stop_slider_1();
+					},
+					function(){
+						$(this).removeClass("read");
+						start_slider_1();
+					}
+				);
+			} else {
+				$(".images_slideshow_js_1 img").hover(
+					function(){
+						$(this).addClass("read");
+						stop_slider_1();
+					},
+					function(){
+						$(this).removeClass("read");
+						start_slider_1();
+					}
+				);
+			}	
+		
+			$(window).load(function() {
+				if ( !0 ) {
+					// Get first image height and width
+					var first_image_1=$('.images_slideshow_js_1 img.slideshow_active')
+					var imgHeight_1=first_image_1.height();
+					var imgWidth_1=first_image_1.width();
+
+					// Add image height and width for images_slideshow container
+					$('.images_slideshow_js_1').css("height",imgHeight_1);
+					$('.images_slideshow_js_1').css("width",imgWidth_1);
+				}
+
+				// Images Gallery
+				if( slideshow_timer_1 == "" )
+					start_slider_1();
+
+				if ( !0 ) {
+					// Request all images after load the page
+					request_images_1();
+				}
+				pagination_click_1();
+			});
+		//]]>
+		</script>
+
+					</div>
+	                <br class="clear" /><br class="clear" />
+	                <p>Code:</p>
+	                <code>
+	                    set img_gallary [list]<br />
+	                    lappend img_gallary [byt_images_root]/career_services/header_reasons_join_en.jpg<br />
+	                    lappend img_gallary [byt_images_root]/career_services/header_reasons_join_ar.jpg<br />
+	                    lappend img_gallary [byt_images_root]/career_services/header_reasons_join_fr.jpg<br />
+	                    <br />
+	                    ns_puts [slide_show -full_path -paginator 1 -unique_id 1 -width "980px" -height "358px" $img_gallary]
+	                </code><br class="clear" />
+	                <h3>2) Slide Show with Number Paginator</h3>
+					<div style="overflow:hidden;position:relative;">
+		                <div class="images_slideshow images_slideshow_js_2 " style="margin:0;height:358px;width:980px;">
+				<img src="http://192.168.6.16:8027/images/career_services/header_reasons_join_en.jpg" alt=""  class="img1 slideshow_active" />
+			
+				<img  alt="" data-src="http://192.168.6.16:8027/images/career_services/header_reasons_join_ar.jpg" class="img2 " />
+			
+				<img  alt="" data-src="http://192.168.6.16:8027/images/career_services/header_reasons_join_fr.jpg" class="img3 " />
+			</div> <div class="images_slideshow-paginator images_slideshow_js_2-paginator number " style="width:980px">
+						<span class="img1" id="current">1</span>
+					
+						<span class="img2" >2</span>
+					
+						<span class="img3" >3</span>
+					</div> <script type="text/javascript">
+		//<![CDATA[
+			//SLIDE SHOW START
+			var slideshow_timer_2 = "";
+			function start_slider_2() {
+				if ( 0 ) {
+					var images_count=$(".images_slideshow_js_2 div.img").length;
+				} else {
+					var images_count=$(".images_slideshow_js_2 > img").length;
+				}
+				if( images_count > 1 && ( (!0 && !$(".images_slideshow_js_2 img").hasClass("read")) || (0 && !$(".images_slideshow_js_2 div.img").hasClass("read")) ) ) {
+					slideshow_timer_2 = setInterval( "slideSwitch_2()",5000 );
+				}
+			}
+			function stop_slider_2() {
+				clearInterval(slideshow_timer_2);
+			}
+			function slideSwitch_2() {
+				if ( 0 ) {
+					var active = $('.images_slideshow_js_2 div.slideshow_active');
+				} else {
+					var active = $('.images_slideshow_js_2 img.slideshow_active');
+				}
+
+				var pagination = $(".images_slideshow_js_2 .slideshow_active").attr("class").split(" ");
+				pagination = pagination[0];
+				$(".images_slideshow_js_2-paginator ."+pagination).attr("id","");
+
+				// Check if there is an image after the prev image
+				if ( 0 ) {
+						var next =  active.next().length ? active.next() : $('.images_slideshow_js_2 div:first');
+				} else {
+					var next =  active.next().length ? active.next() : $('.images_slideshow_js_2 img:first');
+				}
+
+				active.addClass('last-active');
+				$(".images_slideshow_js_2-paginator span").unbind("click");
+				next.css({opacity: 0.0})
+					.addClass('slideshow_active')
+					.animate({opacity: 1.0}, 800, function() {
+						active.removeClass('slideshow_active last-active');
+						var pagination = $(".images_slideshow_js_2 .slideshow_active").attr("class").split(" ");
+						pagination = pagination[0];
+						$(".images_slideshow_js_2-paginator ."+pagination).attr("id","current");
+						pagination_click_2();
+					});
+			}
+			function request_images_2() {
+				$(".images_slideshow_js_2 img").each(function(){
+					var img_src = $(this).attr("data-src");
+					$(this).attr("src",img_src);
+				});
+			}
+
+			function pagination_click_2() {
+				$(".images_slideshow_js_2-paginator span").click(
+				function () {
+					stop_slider_2();
+					var img = $(this).attr("class");
+					$(".images_slideshow_js_2 .slideshow_active").removeClass('slideshow_active');
+					$(".images_slideshow_js_2 ."+img).addClass("slideshow_active");
+					$(".images_slideshow_js_2-paginator #current").removeAttr("id");
+					$(this).attr("id","current");
+					start_slider_2();
+				});
+			}
+
+			if ( 0 ) {
+				$(".images_slideshow_js_2 div.img").hover(
+					function(){
+						$(this).addClass("read");
+						stop_slider_2();
+					},
+					function(){
+						$(this).removeClass("read");
+						start_slider_2();
+					}
+				);
+			} else {
+				$(".images_slideshow_js_2 img").hover(
+					function(){
+						$(this).addClass("read");
+						stop_slider_2();
+					},
+					function(){
+						$(this).removeClass("read");
+						start_slider_2();
+					}
+				);
+			}	
+		
+			$(window).load(function() {
+				if ( !0 ) {
+					// Get first image height and width
+					var first_image_2=$('.images_slideshow_js_2 img.slideshow_active')
+					var imgHeight_2=first_image_2.height();
+					var imgWidth_2=first_image_2.width();
+
+					// Add image height and width for images_slideshow container
+					$('.images_slideshow_js_2').css("height",imgHeight_2);
+					$('.images_slideshow_js_2').css("width",imgWidth_2);
+				}
+
+				// Images Gallery
+				if( slideshow_timer_2 == "" )
+					start_slider_2();
+
+				if ( !0 ) {
+					// Request all images after load the page
+					request_images_2();
+				}
+				pagination_click_2();
+			});
+		//]]>
+		</script>
+
+					</div>
+	                <br class="clear" /><br class="clear" />
+	                <p>Code:</p>
+					<div>
+		                <code>
+		                    set img_gallary [list]<br />
+		                    lappend img_gallary [byt_images_root]/career_services/header_reasons_join_en.jpg<br />
+		                    lappend img_gallary [byt_images_root]/career_services/header_reasons_join_ar.jpg<br />
+		                    lappend img_gallary [byt_images_root]/career_services/header_reasons_join_fr.jpg<br />
+		                    <br /><br class="clear" />
+		                    ns_puts [slide_show -full_path -paginator 1 -type "number" -unique_id 2 -width "980px" -height "358px" $img_gallary]
+		                </code><br />
+					</div>
+				</div>
+            </div>
+			<!-- Start Modal -->
+			<div id="modal_content" class="block_content hide">
+				<h2 class="hd">Modal</h2>
+				<div class="">
+					<h3>Default Modal</h3>
+					<p><a href="javascript:;" title="" onclick="javascript:modals1();" />Show as Dialog</a></p>
+					<h3>Default Modal without title</h3>
+					<p><a href="javascript:;" title="" onclick="javascript:modals2();" />Show as Dialog</a></p>
+					<h3>Small Modal</h3>
+					<p><a href="javascript:;" title="" onclick="javascript:modals3();" />Show as Dialog</a></p>
+					<script>
+						function modals1(){
+							baytModal.setModal("","",false);
+							var title = 'Dialog Title';
+							var body_html = '<div> \
+												<h4>Hello This Default Dialog</h4> \
+												<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br /> \
+												Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p> \
+											</div>';
+							baytModal.setModal(title,body_html,true);
+							return false;
+						}
+						function modals2(){
+							baytModal.setModal("","",false);
+							var body_html = '<div> \
+												<h4>Hello This Default Dialog</h4> \
+												<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br /> \
+												Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p> \
+											</div>';
+							baytModal.setModal("",body_html,true);
+							return false;
+						}
+						function modals3(){
+							baytModal.setModal("","",false);
+							var body_html = '<div> \
+												<h4>Hello This Default Dialog</h4> \
+												<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br /> \
+												Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p> \
+											</div>';
+							baytModal.setModal("",body_html,true,"",null,"small");
+							return false;
+						}
+					</script>
+					<!-- MODAL HTML -->
+					<div id="globalMW" class="hide">
+						<h3 id="globalMWTitle"></h3>
+						<form name="baytModalForm" onsubmit="return validateModal(this);" action="get">
+							<div id="globalMWError"></div>
+							<div id="globalMWMessage"></div>
+							<div id="globalMWContentWrapper">
+								<div id="globalMWContent"></div>
+								<p id="globalMWButtons" class="bttns">
+									<button id="globalMWOk" type="submit">OK</button>
+									<button id="globalMWCancel" type="button" class="aux">Cancel</button>
+									<span id="globalMWLonginInfo"></span>
+								</p>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<!-- Start Html Email Generator -->
+			<div id="html_email_generator" class="block_content hide">
+				<h2 class="hd">Html Email Generator</h2>
+				<iframe src="/development/documentation/external/email_preview.adp" width="100%" height="500px" frameborder="0"></iframe>
+				<h3>Code Snippt:</h3>
+                <pre class="prettyprint lang-html linenums">
+	set lang "en"
+	set bcc_codename "lego"
+	set profile_id "7026767"
+	set action [list "Button Text" "http://www.google.com"]
+	set notification_footer_html "&ltdiv&gt;Footer Html&lt/div&gt;"
+	set header_title "Email Header Title"
+	set body_content "&ltp&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.&lt/p&gt;"
+	
+	ns_puts [byt_generate_email_template -lang $lang -bcc_codename $bcc_codename -profile_id $profile_id -action $action -notification_footer_html $notification_footer_html $header_title $body_content]
+                </pre>
+			</div>
+			<!-- form_styles -->
+			<div id="form_styles" class="block_content hide">
+                <h2 class="hd">Form</h2>
+                    <div class="grid-5 widget-box l">
+                        <div class="widget-header">
+                            <h3 class="margin-reset">Default Form</h3>
+                        </div>
+                        <div class="widget-body">
+                            <form>
+                                <fieldset>
+                                    <div class="req">
+                                        <h4>User Name:</h4>
+                                        <p><input type="text" name="label1" value="" placeholder="User Name" required /></p>
+                                    </div>
+                                    <div>
+                                        <h4>Email:</h4>
+                                        <p><input type="email" name="email" value="" placeholder="email@bayt.com" required /></p>
+                                    </div>
+                                    <div>
+                                        <h4>Upload:</h4>
+										<div class="p">
+											<button type="button" onclick="">File Upload</button>
+											<div id="file_browse_wrapper" class="hide">
+												<input type="file" id="file_browse" class="unvisible" name="upload" value="" multiple />
+											</div>
+										</div>
+                                    </div>
+									<div>
+                                        <h4>Date:</h4>
+										<div class="p">
+											<span class="error" id="err-birthdate_day"></span><span class="error" id="err-birthdate_month"></span><span class="error" id="err-birthdate_year"></span>
+											<select class="req datemax-20150118 date day" style="width:75px" id="id-birthdate_day" name="birthdate_day">
+												<option selected="selected" value="">- Day -</option>
+												<option value="01">1</option>
+											</select>
+											<select class="req datemax-20150118 date month" style="width:120px" id="id-birthdate_month" name="birthdate_month">
+												<option selected="selected" value="">- Month -</option>
+												<option value="01">January</option>
+												<option value="12">December</option>
+											</select>
+											<select class="req datemax-20150118 date year" style="width:75px" id="id-birthdate_year" name="birthdate_year">
+												<option selected="selected" value="">- Year -</option>
+												<option value="1930">1930</option>
+												<option value="2016">2016</option>
+											</select>
+										</div>
+                                    </div>
+                                    <div>
+                                        <h4>Date:</h4>
+                                        <p><input type="date" name="date" value="" class="datejui grid-4" required /></p>
+                                    </div>
+                                    <div>
+                                        <h4>Choose one:</h4>
+                                        <p>
+                                        	<label class="">
+                                                <input type="radio" checked="checked" class="radio " value="1" name="gen_field_4">
+                                                <span class="" id="label-gen_field_41">Male</span>
+                                            </label>
+                                            <label class="">
+                                                <input type="radio" class="radio " value="0" name="gen_field_4">
+                                                <span class="" id="label-gen_field_40">Female</span>
+                                            </label>
+                                            <label class="">
+                                                <input type="radio" class="radio " value="0" name="gen_field_4">
+                                                <span class="" id="label-gen_field_42">Other</span>
+                                            </label>
+                                        </p>
+                                    </div>
+                                    <div class="req">
+                                        <h4>Choose all:</h4>
+                                        <p>
+                                        	<label class="">
+                                                <input type="checkbox" checked="checked" class="checkbox" value="1" name="cho_field_1">
+                                                <span class="" id="label-gen_field_41">Red</span>
+                                            </label>
+                                            <label class="">
+                                                <input type="checkbox" class="checkbox" value="0" name="cho_field_2">
+                                                <span class="" id="label-gen_field_40">Green</span>
+                                            </label>
+                                        </p>
+                                    </div>
+									<div>
+										<h4>Switch</h4>
+										<div class="p">
+											<label class="switch switch-m">
+							    				<input type="checkbox" data-workflow_id="42" class="switch-input toggle-workflow switch-input-checked" id="radio_42">
+							    				<span class="switch-label" data-on="" data-off=""></span>
+							    				<span class="switch-handle"></span>
+							    			</label>
+										</div>
+									</div>
+									<div>
+										<h4>Disabled</h4>
+										<p>
+											<input type="text" name="name" disabled="disabled" placeholder="Disabled Field" />
+										</p>
+									</div>
+									<div>
+										<h4>Read only</h4>
+										<p>
+											<input type="text" name="name" value="Read only value" readonly />
+										</p>
+									</div>
+									<div>
+										<h4>Multi</h4>
+										<p>
+											<span id="err-job_category_1" class="error"></span>
+											<select class="req" onchange="javascript:getMultiValues('job_category', '3');" id="id-job_category_1" name="job_category_1">
+												<option value="">-Select one-</option>
+												<option value="1">Accounting/Auditing</option>
+												<option value="41">Administration</option>
+												<option value="3">Advertising</option>
+											</select>
+											<span id="multi-job_category-select"></span>
+											<br /><a href="javascript:addSelect('job_category','3');" id="add-job_category-select" class="gray_color"><span class="action-btn small"><i class="i-plus"></i></span> Add Another</a>
+											<input type="hidden" value="33" name="job_category" id="id-job_category">
+											</p>
+									</div>
+                                    <div class="req">
+                                        <h4>Your Salary please:</h4>
+                                        <p>
+                                        	  <input id="spinner" name="spinner" value="5" data-type="spinner">
+                                        </p>
+                                    </div>
+									<div class="req">
+                                        <h4>Your Salary please:</h4>
+                                        <p>
+                                        	  <input id="spinner" name="spinner" value="5" data-type="spinner">
+                                        </p>
+                                    </div>
+									<div class="req">
+                                        <h4>Description:</h4>
+                                        <p>
+                                        	<textarea name=""></textarea>
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h4>&nbsp;</h4>
+                                        <p>
+											<button type="submit">Submit</button>
+											<button type="submit" class="gry">Cancel</button>
+										</p>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="grid-4 widget-box r">
+                        <div class="widget-header">
+                            <h3 class="margin-reset">Expansion Form</h3>
+                        </div>
+                        <div class="widget-body">
+                            <form>
+                                <fieldset class="expansion">
+                                    <div class="req">
+                                        <h4>Full Name:</h4>
+                                        <p><input type="text" name="label1" placeholder="Full Name" /></p>
+                                    </div>
+                                    <div>
+                                        <h4>Password:</h4>
+                                        <p><input type="password" name="label1" placeholder="User Name" /></p>
+                                    </div>
+                                    <div>
+                                        <h4>&nbsp;</h4>
+                                        <p>
+											<button type="submit">Submit</button>
+										</p>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+					<div class="grid-4 widget-box r">
+                        <div class="widget-header">
+                            <h3 class="margin-reset">Vertical Form</h3>
+                        </div>
+                        <div class="widget-body">
+                        	<form>
+                                <fieldset class="vertical">
+                                    <div class="req">
+                                        <h4>User Name:</h4>
+                                        <p><input type="text" name="label1" value="" /></p>
+                                    </div>
+                                    <div>
+                                        <h4>Your Phone:</h4>
+                                        <p class="input-group">
+                                        	<span class="input-group-icon">
+                                                <i class="icon-phone"></i>
+                                            </span>
+                                        	<input type="text" name="label5" value="" />
+                                        </p>
+                                    </div>
+                                    <div class="">
+                                        <h4>Choose you country:</h4>
+                                        <p>
+                                            <select name="browsers">
+                                              <option value="Internet Explorer">Internet Explorer</option>
+                                              <option value="Firefox">Firefox</option>
+                                              <option value="Chrome">Chrome</option>
+                                              <option value="Opera">Opera</option>
+                                              <option value="Safari">Safari</option>
+                                            </select>
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h4>&nbsp;</h4>
+                                        <p>
+											<button type="submit">Submit</button>
+											<button type="submit" class="gry">Cancel</button>
+										</p>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                    <br class="clear" /><br class="clear" />
+                    
+            </div><!-- End form_styles -->
+			<!-- Start Dropdowns -->
+			<div id="dropdowns" class="block_content hide">
+				<h2 class="hd">Dropdown Menu</h2>
+				<div>
+					<div style="position:relative;z-index:999;">
+						<ul class="menu-action" style="margin:0 20px 0 0;">
+							<li><a href="javascript:;"><span>Home <i class="i-down-arrow"></i></span></a>
+								<ul class="sub-menu">
+									<li><a href="#">Options1</a><li>
+									<li class="submenu-right"><a href="#"><i class="i-cv"></i> Options1 <i class="i-right-arrow r"></i></a>
+										<ul class="submenu-right-list">
+											<li><a href="#">hello</a></li>
+										</ul>
+									<li>
+									<li class="sep"><li>
+									<li><a href="#"><i class="i-search"></i> Options2</a><li>
+								</ul>
+							</li>
+						</ul>
+						<ul class="menu-action">
+							<li><a href="javascript:;"><span>Another Menu <i class="i-down-arrow"></i></span></a>
+								<ul class="sub-menu">
+									<li><a href="#">Options1</a><li>
+									<li><a href="#"><i class="i-cv"></i> Options1</a><li>
+									<li class="sep"><li>
+									<li><a href="#"><i class="i-search"></i> Options2</a><li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<br />
+					<h2 class="hd">Dropdown - Communicate Menu</h2>
+					<div class="menu-grp">
+						<ul class="menu-action">
+							<li><a href="javascript:;"><span>Annotate <i class="i-down-arrow"></i></span></a>
+								<ul class="sub-menu">
+									<li><a href="#">Options1</a><li>
+									<li><a href="#"><i class="i-cv"></i> Options1</a><li>
+									<li class="sep"><li>
+									<li><a href="#"><i class="i-search"></i> Options2</a><li>
+								</ul>
+							</li>
+						</ul><ul class="menu-action">
+							<li><a href="javascript:;"><span>Communicate <i class="i-down-arrow"></i></span></a>
+								<ul class="sub-menu">
+									<li><a href="#">Options1</a><li>
+									<li><a href="#"><i class="i-cv"></i> Options1</a><li>
+									<li class="sep"><li>
+									<li><a href="#"><i class="i-search"></i> Options2</a><li>
+								</ul>
+							</li>
+						</ul><ul class="menu-action">
+							<li><a href="javascript:;"><span>Export <i class="i-down-arrow"></i></span></a>
+								<ul class="sub-menu">
+									<li><a href="#">Options1</a><li>
+									<li><a href="#"><i class="i-cv"></i> Options1</a><li>
+									<li class="sep"><li>
+									<li><a href="#"><i class="i-search"></i> Options2</a><li>
+								</ul>
+							</li>
+						</ul><ul class="menu-action">
+							<li><a href="javascript:;"><span>Manage <i class="i-down-arrow"></i></span></a>
+								<ul class="sub-menu">
+									<li><a href="#">Options1</a><li>
+									<li><a href="#"><i class="i-cv"></i> Options1</a><li>
+									<li class="sep"><li>
+									<li><a href="#"><i class="i-search"></i> Options2</a><li>
+								</ul>
+							</li>
+						</ul><ul class="menu-action actions-list">
+							<li id="job_offer_button">
+								<a title="Send job offer letter to selected CVs" onclick="" href="javascript:;" class="t-moveto"><i class="i-job-offer-16"></i> Send Job Offer</a>
+							</li>
+						</ul>
+					</div>
+					<h2>Vertical Action Menu</h2>
+					<div class="menu-grp vgrp">
+						<ul class="menu-action">
+							<li class="submenu-right"><a href="javascript:;"><span>Annotate <i class="i-right-arrow"></i></span></a>
+								<ul class="submenu-right-list">
+									<li><a href="#">Options1</a><li>
+									<li><a href="#"><i class="i-cv"></i> Options1</a><li>
+									<li class="sep"><li>
+									<li><a href="#"><i class="i-search"></i> Options2</a><li>
+								</ul>
+							</li>
+						</ul><ul class="menu-action">
+							<li class="submenu-right"><a href="javascript:;"><span>Communicate <i class="i-right-arrow"></i></span></a>
+								<ul class="submenu-right-list">
+									<li><a href="#">Options1</a><li>
+									<li><a href="#"><i class="i-cv"></i> Options1</a><li>
+									<li class="sep"><li>
+									<li><a href="#"><i class="i-search"></i> Options2</a><li>
+								</ul>
+							</li>
+						</ul><ul class="menu-action">
+							<li class="submenu-right"><a href="javascript:;"><span>Export <i class="i-right-arrow"></i></span></a>
+								<ul class="submenu-right-list">
+									<li><a href="#">Options1</a><li>
+									<li><a href="#"><i class="i-cv"></i> Options1</a><li>
+									<li class="sep"><li>
+									<li><a href="#"><i class="i-search"></i> Options2</a><li>
+								</ul>
+							</li>
+						</ul><ul class="menu-action">
+							<li class="submenu-right"><a href="javascript:;"><span>Manage <i class="i-right-arrow"></i></span></a>
+								<ul class="submenu-right-list">
+									<li><a href="#">Options1</a><li>
+									<li><a href="#"><i class="i-cv"></i> Options1</a><li>
+									<li class="sep"><li>
+									<li><a href="#"><i class="i-search"></i> Options2</a><li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<h3 class="hd">Actions</h3>
+					<div>
+						<div class="action-grp">
+							<a class="action-item" href="javascript:;">Item1</a>
+							<a class="action-item" href="javascript:;">Item2</a>
+							<a class="action-item" href="javascript:;">Item3</a>
+						</div>
+					</div>
+					<h3 class="hd">Actions with icons</h3>
+					<div>
+						<div class="action-grp">
+							<a class="action-item" href="javascript:;"><i class="i-email-16"></i> Item1</a>
+							<a class="action-item" href="javascript:;"><i class="i-lock"></i> Item2</a>
+						</div>
+					</div>
+					<h3 class="hd">Actions - Small</h3>
+					<div>
+						<div class="action-grp sm">
+							<a class="action-item" href="javascript:;"><i class="i-edit"></i> Item1</a>
+							<a class="action-item" href="javascript:;"><i class="i-delete-16"></i> Item2</a>
+							<a class="action-item" href="javascript:;"><i class="i-share-16"></i> Item2</a>
+						</div>
+					</div>
+					<h3 class="hd">Form (Input - Button)</h3>
+					<div>
+						<div class="frm-input-action">
+							<input type="text" name="" />
+							<button>Action</button>
+						</div>
+					</div>
+					<h3 class="hd">Form (Input - Dropdown)</h3>
+					<div>
+						<div class="frm-input-action">
+							<input type="text" name="" />
+							<ul class="menu-action">
+								<li><a href="javascript:;"><span>Another Menu <i class="i-down-arrow"></i></span></a>
+									<ul class="sub-menu">
+										<li><a href="javascript:;">Options1</a><li>
+										<li><a href="javascript:;"><i class="i-cv"></i> Options1</a><li>
+										<li class="sep"><li>
+										<li><a href="javascript:;"><i class="i-search"></i> Options2</a><li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div>
+						<h3 class="hd">clickable menu</h3>
+						<div>
+							<ul class="menu menu_click">
+								<li>
+									<a href="/en/job-post"><span class="alone"><b>Create a Position</b><i class="i-separator tablet_hide"></i><i class="i-down-arrow"></i></span></a>
+									<ul class="sub-menu">
+										<li><a class="t-share" href="javascript:;" onclick="javascript:DoAction('share-cvs',this)"><i class="i-share-16"></i> Menu Items List</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End Dropdowns -->
+			<div id="thumbs" class="block_content hide">
+				<h2 class="hd">Thumbs</h2>
+				<div class="overflow-h">
+					<div class="grid-5 l">
+						<div class="pframe p70">
+							<img src="http://192.168.6.16:8027/images/lego/img_placholder.png" class="" title="" />
+						</div>
+					</div>
+					<div class="grid-5 r">
+						<div class="pframe p120">
+							<img src="http://192.168.6.16:8027/images/lego/img_placholder.png" class="" title="" />
+						</div>
+					</div>
+				</div>
+				<br class="clear" />
+				<div class="overflow-h">
+					<div class="grid-5 l">
+						<div class="pframe p140">
+							<img src="http://192.168.6.16:8027/images/lego/img_placholder.png" class="" title="" />
+						</div>
+					</div>
+					<div class="grid-5 r">
+						<div class="pframe p180">
+							<img src="http://192.168.6.16:8027/images/lego/img_placholder.png" class="" title="" />
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="charts" class="block_content hide">
+				<h2 class="hd">Charts</h2>
+				<div class="margin_bottom_20">
+					<h3 class="hd">Bar Chart</h3>
+					<div class="margin_bottom_20">
+						<!-- http://bl.ocks.org/Caged/6476579 -->
+						<script>
+							var data = [{"total":225,"days":[12,51,60,26,38,31,7]},{"total":279,"days":[42,33,34,72,61,12,25]},{"total":212,"days":[12,59,24,70,36,5,6]},{"total":335,"days":[17,43,38,58,67,72,40]},{"total":329,"days":[40,53,62,48,38,36,52]},{"total":234,"days":[15,25,41,66,35,37,15]},{"total":175,"days":[2,40,23,40,23,34,13]},{"total":308,"days":[20,22,63,55,51,66,31]},{"total":401,"days":[20,64,42,62,88,79,46]},{"total":214,"days":[24,27,25,48,38,28,24]},{"total":332,"days":[26,43,20,109,74,29,31]},{"total":333,"days":[65,66,62,60,14,43,23]},{"total":437,"days":[33,74,82,70,85,64,29]},{"total":687,"days":[29,82,87,167,156,126,40]},{"total":243,"days":[11,52,44,50,46,30,10]},{"total":360,"days":[16,41,86,62,83,60,12]},{"total":349,"days":[22,55,48,36,88,57,43]},{"total":368,"days":[29,100,68,54,55,46,16]},{"total":377,"days":[3,71,66,57,93,82,5]},{"total":265,"days":[12,61,61,19,44,46,22]},{"total":396,"days":[20,58,70,52,84,93,19]},{"total":467,"days":[25,47,128,93,70,35,69]},{"total":524,"days":[55,79,94,95,122,70,9]},{"total":535,"days":[21,96,95,115,78,89,41]},{"total":333,"days":[20,50,49,52,58,51,53]},{"total":258,"days":[7,23,50,59,46,50,23]},{"total":242,"days":[12,4,54,53,46,33,40]},{"total":335,"days":[1,34,40,75,97,51,37]},{"total":325,"days":[32,57,65,46,60,58,7]},{"total":224,"days":[23,42,43,28,31,27,30]},{"total":317,"days":[20,46,43,46,83,36,43]},{"total":119,"days":[1,10,9,45,30,17,7]},{"total":368,"days":[13,74,77,85,72,40,7]},{"total":271,"days":[10,50,46,61,68,31,5]},{"total":290,"days":[26,48,39,37,68,43,29]},{"total":393,"days":[27,50,133,47,73,37,26]},{"total":316,"days":[2,63,66,47,63,33,42]},{"total":146,"days":[0,32,38,23,45,7,1]},{"total":255,"days":[23,34,72,46,48,24,8]},{"total":196,"days":[9,32,82,18,16,29,10]},{"total":410,"days":[41,52,67,42,49,103,56]},{"total":280,"days":[13,35,40,60,68,53,11]},{"total":432,"days":[45,65,59,55,71,68,69]},{"total":371,"days":[19,104,95,51,66,20,16]},{"total":285,"days":[2,38,50,72,74,47,2]},{"total":350,"days":[47,16,96,93,32,52,14]},{"total":234,"days":[34,68,66,32,5,10,19]},{"total":279,"days":[27,43,64,48,60,25,12]},{"total":391,"days":[40,54,59,68,80,51,39]},{"total":168,"days":[0,44,42,36,30,16,0]},{"total":0,"days":[0,0,0,0,0,0,0]},{"total":14,"days":[6,0,0,0,0,2,6]},{"total":0,"days":[0,0,0,0,0,0,0]}];
+							var margin = {top: 40, right: 20, bottom: 30, left: 40},
+							    width = 960 - margin.left - margin.right,
+							    height = 500 - margin.top - margin.bottom;
+							
+							var formatPercent = d3.format(".0%");
+							
+							var x = d3.scale.ordinal()
+							    .rangeRoundBands([0, width], .1);
+							
+							var y = d3.scale.linear()
+							    .range([height, 0]);
+							
+							var xAxis = d3.svg.axis()
+							    .scale(x)
+							    .orient("bottom");
+							
+							var yAxis = d3.svg.axis()
+							    .scale(y)
+							    .orient("left")
+							    .tickFormat(formatPercent);
+							
+							var tip = d3.tip()
+							  .attr('class', 'd3-tip')
+							  .offset([-10, 0])
+							  .html(function(d) {
+							    return "<strong>Frequency:</strong> <span style='color:red'>" + d.frequency + "</span>";
+							  })
+							
+							var svg = d3.select("body").append("svg")
+							    .attr("width", width + margin.left + margin.right)
+							    .attr("height", height + margin.top + margin.bottom)
+							  .append("g")
+							    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+							
+							svg.call(tip);
+							
+							d3.tsv("data.tsv", type, function(error, data) {
+							  x.domain(data.map(function(d) { return d.letter; }));
+							  y.domain([0, d3.max(data, function(d) { return d.frequency; })]);
+							
+							  svg.append("g")
+							      .attr("class", "x axis")
+							      .attr("transform", "translate(0," + height + ")")
+							      .call(xAxis);
+							
+							  svg.append("g")
+							      .attr("class", "y axis")
+							      .call(yAxis)
+							    .append("text")
+							      .attr("transform", "rotate(-90)")
+							      .attr("y", 6)
+							      .attr("dy", ".71em")
+							      .style("text-anchor", "end")
+							      .text("Frequency");
+							
+							  svg.selectAll(".bar")
+							      .data(data)
+							    .enter().append("rect")
+							      .attr("class", "bar")
+							      .attr("x", function(d) { return x(d.letter); })
+							      .attr("width", x.rangeBand())
+							      .attr("y", function(d) { return y(d.frequency); })
+							      .attr("height", function(d) { return height - y(d.frequency); })
+							      .on('mouseover', tip.show)
+							      .on('mouseout', tip.hide)
+							
+							});
+
+							
+							function type(d) {
+							  d.frequency = +d.frequency;
+							  return d;
+							}
+
+						</script>
+					</div>
+					<h3 class="hd">Chart2</h3>
+					<div class="margin_bottom_20"></div>
+				</div>
+			</div>
+			<div id="miscellaneous" class="block_content hide">
+				<h2 class="hd">Miscellaneous</h2>
+				<div class="margin_bottom_20">
+					<h3 class="hd">Messages</h3>
+					<p class="alert">
+						<strong>There was a problem submitting this form: <span onclick="close_msg($(this));" class="close_msg r"><i class="i-close"></i></span></strong>
+						Please review the highlighted fields below and try submitting again.
+						<br /><button>Momken La7za</button>
+					</p>
+					<p class="success">
+						<strong>There was a problem submitting this form: <span onclick="close_msg($(this));" class="close_msg r"><i class="i-close"></i></span></strong>
+						Please review the highlighted fields below and try submitting again.
+						<br /><button>Momken La7za</button>
+					</p>
+					<p class="info">
+						<strong>There was a problem submitting this form: <span onclick="close_msg($(this));" class="close_msg r"><i class="i-close"></i></span></strong>
+						Please review the highlighted fields below and try submitting again.
+						<br /><button>Momken La7za</button>
+					</p>
+					<p class="action">
+						<strong>There was a problem submitting this form: <span onclick="close_msg($(this));" class="close_msg r"><i class="i-close"></i></span></strong>
+						Please review the highlighted fields below and try submitting again.
+						<br /><button>Momken La7za</button>
+					</p>
+				</div>
+				
+				<div class="margin_bottom_20">
+					<h3 class="hd">Tags</h3>
+					<div>
+						<div class="margin_bottom_10">
+							<span class="tag_curve bg_green">
+								<span class="tag_name tWhite">Culture Fit</span><a href="javascript:;" class="tag_delete tWhite" title="Delete"><i class="i-close"></i></a>
+							</span>
+							<span class="tag_curve bg_blue">
+								<span class="tag_name tWhite">Culture Fit</span><a href="javascript:;" class="tag_delete tWhite"  title="Delete"><i class="i-close"></i></a>
+							</span>
+							<span class="tag_curve bg_orange">
+								<span class="tag_name tWhite">Culture Fit</span><a href="javascript:;" class="tag_delete tWhite"  title="Delete"><i class="i-close"></i></a>
+							</span>
+							<span class="tag_curve bg_red">
+								<span class="tag_name tWhite">Culture Fit</span><a href="javascript:;" class="tag_delete tWhite"  title="Delete"><i class="i-close"></i></a>
+							</span>
+						</div>
+						<div class="margin_bottom_10">
+							<span class="tag_curve bg_blue">
+								<span class="tag_name tWhite">Culture Fit</span>
+								<a href="javascript:;" class="tag_delete tWhite" title="Delete"><i class="i-close"></i></a>
+							</span>
+							<span class="tag_curve bg_orange">
+								<span class="tag_name tWhite">Culture Fit</span>
+							</span>
+							<span class="tag_curve bg_dgray">
+								<span class="tag_name tWhite">Culture Fit</span>
+							</span>
+						</div>
+					</div>
+				</div>
+				
+				<div class="margin_bottom_20">
+					<h3 class="hd">Images</h3>
+					<div>
+						<div class="margin_bottom_10">
+							<span class="tag_curve bg_green">
+								<span class="tag_name tWhite">Culture Fit</span><a href="javascript:;" class="tag_delete tWhite" title="Delete"><i class="i-close"></i></a>
+							</span>
+							<span class="tag_curve bg_blue">
+								<span class="tag_name tWhite">Culture Fit</span><a href="javascript:;" class="tag_delete tWhite"  title="Delete"><i class="i-close"></i></a>
+							</span>
+							<span class="tag_curve bg_orange">
+								<span class="tag_name tWhite">Culture Fit</span><a href="javascript:;" class="tag_delete tWhite"  title="Delete"><i class="i-close"></i></a>
+							</span>
+							<span class="tag_curve bg_red">
+								<span class="tag_name tWhite">Culture Fit</span><a href="javascript:;" class="tag_delete tWhite"  title="Delete"><i class="i-close"></i></a>
+							</span>
+						</div>
+					</div>
+				</div>
+				
+				<div class="margin_bottom_20">
+					<h3 class="hd">Pagination</h3>
+					<div>
+						<p style="margin-top:2px;" class="pg overflow-h">
+							<span class="l"></span>
+							<span class="l"><span class="page_arrow"><i class="i-left-arrow2 vert_algn_mid"></i></span>
+								<span class="pager">Page 
+									<select name="start" onchange="" style="width:50px">
+										<option value="1">1</option>
+										<option value="21">2</option>
+										<option value="29">3</option>
+										<option value="23">4</option>
+										<option value="65" selected="selected">5</option>
+										<option value="78">6</option>
+									</select>
+									of 2
+								</span> 
+								<a href="" class="page_arrow"><i class="i-right-arrow2 vert_algn_mid"></i></a>
+							</span>
+						</p>
+						<p style="margin-top:2px;" class="pg overflow-h">
+							<span class="l"></span>
+							<span class="l"><span class="page_arrow"><i class="i-left-arrow2 vert_algn_mid"></i></span>
+								<span class="pager">Page 
+									<select name="start" onchange="" style="width:50px">
+										<option value="1" selected="selected">1</option>
+										<option value="21">2</option>
+									</select>
+									of 2
+								</span> 
+								<a href="" class="page_arrow"><i class="i-right-arrow2 vert_algn_mid"></i></a>
+							</span>
+						</p>
+					</div>
+				</div>
+				<div class="margin_bottom_20">
+					<h2 class="hd">Default Progress Bar</h2>
+					<div class="progress">
+						<div class="fill" style="width:65%;"></div>
+					</div>
+				</div>
+				<div class="widget-box">
+					<div class="widget-header"><h2 class="hd">Widget Progress Bar</h2></div>
+					<div class="widget-body">
+						<div class="progress">
+							<div class="fill" style="width:65%;"><span class="progress_perc">65%</div>
+						</div>
+					</div>
+				</div>
+				<div class="widget-box">
+					<div class="widget-header"><h2 class="hd">Widget Progress Bar - Rounded</h2></div>
+					<div class="widget-body">
+						<div class="progress b-radius">
+							<div class="fill" style="width:65%;"><span class="progress_perc">65%</div>
+						</div>
+					</div>
+				</div>
+				<div class="widget-box">
+					<div class="widget-header"><h2 class="hd">Widget Progress Bar - Large</h2></div>
+					<div class="widget-body">
+						<div class="progress b-radius large">
+							<div class="fill" style="width:75%;"><span class="progress_perc">75%</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="widgets" class="block_content hide">
+				<h2 class="hd">Widgets</h2>
+				<div>
+					<div class="widget-box">
+						<div class="widget-header"><h2>Widget Title</h2></div>
+						<div class="widget-body">
+							<p class="margin-reset">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+							Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
+							it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+							remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+							and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+						</div>
+						<div class="widget-footer">
+							<p class="margin-reset">Footer Goes here!!</p>
+						</div>
+					</div>
+					<div class="widget-box">
+						<div class="widget-header bg_gray"><h2>Widget Title</h2></div>
+						<div class="widget-body">
+							<p class="margin-reset">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+							Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
+							it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+							remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+							and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+						</div>
+						<div class="widget-footer bg_gray">
+							<p class="margin-reset">Footer Goes here!!</p>
+						</div>
+					</div>
+					<div class="overflow-h">
+						<div class="grid-4 l">
+							<div class="widget-box">
+								<div class="widget-header overflow-h">
+									<h2 class="grid-5 l">Widget Title</h2>
+									<div class="grid-5 r search_field">
+										<input type="text" placeholder="Search" class="searchbox">
+										<i class="i-search"></i>
+									</div>
+								</div>
+								<div class="widget-body">
+									<p class="margin-reset">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+									Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
+									it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+									remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+									and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+								</div>
+								<div class="widget-footer">
+									<p class="margin-reset c"><a href="#" class="tBlack underline"><b>Footer Goes here!!</b></a></p>
+								</div>
+							</div>
+						</div>
+						<div class="grid-4 r">
+							<div class="widget-box">
+								<div class="widget-header overflow-h">
+									<h2 class="grid-5 l">Widget Title</h2>
+									<div class="grid-4 r text-r">
+										<a class="action-btn" href="javascript:;"><i class="i-export-16"></i></a>
+										<a class="action-btn" href="javascript:;"><i class="i-delete-16"></i></a>
+										<span class="action-btn"><input type="checkbox" name="checkall"><i class="i-down-arrow"></i></span>
+									</div>
+								</div>
+								<div class="widget-body">
+									<p class="margin-reset">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+									Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
+									it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+									remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+									and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+								</div>
+								<div class="widget-footer">
+									<p class="margin-reset c"><a href="#" class="tBlack underline"><b>Footer Goes here!!</b></a></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+        </div>
+	</div>	
+	<br class="clear" />
+</div>
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?skin=sons-of-obsidian" defer></script>
+<script>
+	$(function() {
+		$( ".datejui" ).datepicker({
+			showOn: "both",
+			buttonImage: "/images/icons/gl-calnde-icon.png",
+			buttonImageOnly: true
+		});
+		
+		$( "#spinner" ).spinner({
+		  min: 5,
+		  max: 2500,
+		  step: 25,
+		  start: 1000,
+		  numberFormat: "C"
+			});
+
+			
+			
+			if(window.location.hash){
+				var tab_id = window.location.hash.substring(1);
+				if($("#"+tab_id).length) {
+				$(".block_content").hide();
+				$(".features_items_list li").removeClass("on");
+				$("."+tab_id).parent().addClass("on");
+				var activeTab = $("."+tab_id).attr("href");
+				$(activeTab).show();
+			}
+		}
+	});
+	
+	// D3 Bar Chart
+	var margin = {top: 20, right: 20, bottom: 30, left: 40},
+		width = 960 - margin.left - margin.right,
+		height = 500 - margin.top - margin.bottom;
+	
+	var x = d3.scale.ordinal().rangeRoundBands([0, width], .1);
+	
+	var y = d3.scale.linear().range([height, 0]);
+	
+	var xAxis = d3.svg.axis().scale(x).orient("bottom");
+	
+	var yAxis = d3.svg.axis().scale(y).orient("left").ticks(10, "%");
+	
+	var svg = d3.select("body").append("svg").attr("width", width + margin.left + margin.right).attr("height", height + margin.top + margin.bottom).append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+	
+	d3.tsv("data.tsv", type, function(error, data) {
+		x.domain(data.map(function(d) { return d.letter; }));
+		y.domain([0, d3.max(data, function(d) { return d.frequency; })]);
+	
+	  svg.append("g").attr("class", "x axis").attr("transform", "translate(0," + height + ")").call(xAxis);
+	
+	  svg.append("g").attr("class", "y axis").call(yAxis).append("text").attr("transform", "rotate(-90)").attr("y", 6).attr("dy", ".71em").style("text-anchor", "end").text("Frequency");
+	
+	  svg.selectAll(".bar").data(data)
+	    .enter().append("rect")
+	      .attr("class", "bar")
+	      .attr("x", function(d) { return x(d.letter); })
+	      .attr("width", x.rangeBand())
+	      .attr("y", function(d) { return y(d.frequency); })
+	      .attr("height", function(d) { return height - y(d.frequency); });
+	
+	});
+	
+	function type(d) {
+		d.frequency = +d.frequency;
+		return d;
+	}
+</script>
+</body>
+</html> 

@@ -1,0 +1,17 @@
+1. Lego approach.
+2. multilingual.
+3. UI kit.
+4. Flat colors.
+5. Performance.
+6. Naming convention.
+7. Accessibility.
+8. Responsive.
+9. cross browsers.
+10.Changes on Document no need increase css version.
+11. Funny Styles.
+
+
+
+
+
+LegoStyle its a CSS Framework with lego approach, handle multilingual directions (rtl & ltr), beautiful UI elements, responsive and valid cross browsers.

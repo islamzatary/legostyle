@@ -1,0 +1,207 @@
+body {
+	background:#ECECEC;
+}
+/**************** Start Font Icons **********************/
+
+@font-face {
+  font-family: 'fontello';
+  src: url('../font/lego.eot?11288853');
+  src: url('../font/lego.eot?11288853#iefix') format('embedded-opentype'),
+       url('../font/lego.woff?11288853') format('woff'),
+       url('../font/lego.ttf?11288853') format('truetype'),
+       url('../font/lego.svg?11288853#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?11288853#fontello') format('svg');
+  }
+}
+*/
+ 
+ [class^="i-"]:before, [class*=" i-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+     
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.i-email-16:before { content: '\e820'; } /* '' */
+.i-requisition-nav-16:before { content: '\e835'; } /* '' */
+.i-export-16:before { content: '\e822'; } /* '' */
+.i-job-applicants-16:before { content: '\e824'; } /* '' */
+.i-move-to-application-16:before { content: '\e827'; } /* '' */
+.i-move-to-folder-16:before { content: '\e828'; } /* '' */
+.i-note-16:before { content: '\e829'; } /* '' */
+.i-print-16:before { content: '\e82a'; } /* '' */
+.i-report-inappropriate-16:before { content: '\e82b'; } /* '' */
+.i-share-24:before { content: '\e807'; } /* '' */
+.i-tag-24:before { content: '\e808'; } /* '' */
+.i-application-status-24:before { content: '\e80a'; } /* '' */
+.i-move-to-folder-24:before { content: '\e802'; } /* '' */
+.i-note-24:before { content: '\e803'; } /* '' */
+.i-report-inappropriate-24:before { content: '\e805'; } /* '' */
+.i-screening-questionnaire-24:before { content: '\e806'; } /* '' */
+.i-upload-document-24:before { content: '\e809'; } /* '' */
+.i-attachment-24:before { content: '\e80b'; } /* '' */
+.i-copy-24:before { content: '\e80c'; } /* '' */
+.i-delete-24:before { content: '\e80d'; } /* '' */
+.i-duplicate-check-24:before { content: '\e80e'; } /* '' */
+.i-export-24:before { content: '\e811'; } /* '' */
+.i-i-task-24:before { content: '\e813'; } /* '' */
+.i-print-24:before { content: '\e82d'; } /* '' */
+.i-email-24:before { content: '\e80f'; } /* '' */
+.i-screening-questionnaire-16:before { content: '\e804'; } /* '' */
+.i-share-16:before { content: '\e816'; } /* '' */
+.i-evaluation-form-16:before { content: '\e821'; } /* '' */
+.i-task-16:before { content: '\e818'; } /* '' */
+.i-upload-document-16:before { content: '\e819'; } /* '' */
+.i-application-status-16:before { content: '\e81a'; } /* '' */
+.i-attachment-16:before { content: '\e81b'; } /* '' */
+.i-copy-16:before { content: '\e81c'; } /* '' */
+.i-cover-letter-16:before { content: '\e81d'; } /* '' */
+.i-delete-16:before { content: '\e81e'; } /* '' */
+.i-cover-letter-24:before { content: '\e82c'; } /* '' */
+.i-duplicate-check-16:before { content: '\e81f'; } /* '' */
+.i-interview-16:before { content: '\e823'; } /* '' */
+.i-mark-as-hired-16:before { content: '\e826'; } /* '' */
+.i-evaluation-form-24:before { content: '\e810'; } /* '' */
+.i-interview-24:before { content: '\e812'; } /* '' */
+.i-job-applicants-24:before { content: '\e814'; } /* '' */
+.i-mark-as-hired-24:before { content: '\e800'; } /* '' */
+.i-move-to-application-24:before { content: '\e801'; } /* '' */
+.i-job-offer-24:before { content: '\e815'; } /* '' */
+.i-job-offer-16:before { content: '\e825'; } /* '' */
+.i-interview-nav-16:before { content: '\e82e'; } /* '' */
+.i-position-nav-16:before { content: '\e82f'; } /* '' */
+.i-talent-nav-16:before { content: '\e830'; } /* '' */
+.i-dashboard-nav-16:before { content: '\e831'; } /* '' */
+.i-report-nav-16:before { content: '\e832'; } /* '' */
+.i-agencies-nav-16:before { content: '\e833'; } /* '' */
+.i-hiring-approval-nav-16:before { content: '\e834'; } /* '' */
+.i-tag-16:before { content: '\e817'; } /* '' */
+
+/******************************* End Font Icons *****************************/
+
+#main-header {
+	padding:10px 20px;
+	height: 70px;
+	background: #FFF;
+	box-shadow:0 1px 5px #ccc
+}
+#logo {
+	width:200px;
+	font-weight: bold;
+	font-size: 1.2em;
+}
+#logo img {
+	max-height:50px;
+	margin:0 10px 0 0;
+}
+#ar #logo img {
+	margin:0 0 0 10px;
+}
+#lego-navbar {
+	overflow:auto;
+}
+#main-wrapper {
+	position:relative;
+}
+#sidebar-panel {
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	width:200px;
+	background:#193342;
+}
+#ar #sidebar-panel {
+	left:auto;
+	right:0;
+}
+#sidebar-panel .nav-menu {
+	background:#193342;
+}
+#content-panel {
+	padding:20px;
+	margin:0 0 0 200px;	
+	min-height:400px;
+}
+#ar #content-panel {
+		margin:0 200px 0 0;	
+}
+footer {
+}
+.quicksearch {
+
+}
+.quicksearch input {
+	background:#ECECEC;
+}
+.nav-menu {}
+.nav-menu li {
+}
+.nav-menu li a {
+	color:#FFF;
+	text-decoration: none;
+	display: block;
+	padding:10px;
+}
+.nav-menu li a:hover {
+	background:#224354;
+}
+h1, h2, h3 {
+	color:#3C3C3B;
+}
+.subnav-menu {
+	display:none;
+	margin:0;
+}
+.subnav-menu li a {
+	padding:5px 5px 5px 20px;
+}
+#ar .subnav-menu li a {
+	padding:5px 20px 5px 5px;
+}
+.widget-box {
+	border:0;
+}
+.widget-header h2 {
+	margin:0;
+}
+.widget-box, .widget-header {
+	border-radius:3px;
+	background:#FFF;
+}
+.widget-header {
+	border-bottom:1px solid #F5F5F5;
+}
